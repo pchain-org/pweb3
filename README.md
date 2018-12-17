@@ -1,6 +1,6 @@
 # Pchain JavaScript API
 
-This is the Pchain compatible [JavaScript API](https://github.com/PchainJS/PchainWeb3/wiki/JavaScript-API)
+This is the Pchain compatible [JavaScript API](https://github.com/pchain-org/pweb3/wiki/JavaScript-API)
 which implements the [Generic JSON RPC](https://github.com/pchain-org/pchain/wiki/JSON-RPC#chain_createchildchain) spec. It's available on npm as a node module, for Bower and component as embeddable scripts.
 
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![dependency status][dep-image]][dep-url] [![dev dependency status][dep-dev-image]][dep-dev-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Stories in Ready][waffle-image]][waffle-url]
@@ -9,7 +9,7 @@ which implements the [Generic JSON RPC](https://github.com/pchain-org/pchain/wik
 
 You need to run a local Pchain node to use this library.
 
-[Documentation](https://github.com/PchainJS/PchainWeb3/wiki/JavaScript-API)
+[Documentation](https://github.com/pchain-org/pweb3/wiki/JavaScript-API)
 
 ## Table of Contents
 
@@ -77,7 +77,7 @@ if (typeof web3 !== 'undefined') {
 Set a provider (`HttpProvider` using [HTTP Basic Authentication](https://en.wikipedia.org/wiki/Basic_access_authentication)):
 
 ```js
-web3.setProvider(new web3.providers.HttpProvider('http://' + BasicAuthUsername + ':' + BasicAuthPassword + '@localhost:8545'));
+web3.setProvider(new web3.providers.HttpProvider('http://' + BasicAuthUsername + ':' + BasicAuthPassword + '@localhost:8545/pchain'));
 ```
 
 There you go, now you can use it:
@@ -87,7 +87,7 @@ var coinbase = web3.eth.coinbase;
 var balance = web3.eth.getBalance(coinbase);
 ```
 
-You can find more examples in the [`example`](https://github.com/ethereum/web3.js/tree/master/example) directory.
+You can find more examples in the [`example`](https://github.com/pchain-org/pweb3/tree/master/example) directory.
 
 ```
 ## Contribute!
@@ -122,17 +122,3 @@ npm test
 ## License
 
 [LGPL-3.0+](LICENSE.md) © 2018 Contributors
-
-
-[npm-image]: https://badge.fury.io/js/web3.svg
-[npm-url]: https://npmjs.org/package/web3
-[travis-image]: https://travis-ci.org/ethereum/web3.js.svg
-[travis-url]: https://travis-ci.org/ethereum/web3.js
-[dep-image]: https://david-dm.org/ethereum/web3.js.svg
-[dep-url]: https://david-dm.org/ethereum/web3.js
-[dep-dev-image]: https://david-dm.org/ethereum/web3.js/dev-status.svg
-[dep-dev-url]: https://david-dm.org/ethereum/web3.js#info=devDependencies
-[coveralls-image]: https://coveralls.io/repos/ethereum/web3.js/badge.svg?branch=master
-[coveralls-url]: https://coveralls.io/r/ethereum/web3.js?branch=master
-[waffle-image]: https://badge.waffle.io/ethereum/web3.js.svg?label=ready&title=Ready
-[waffle-url]: https://waffle.io/ethereum/web3.js
