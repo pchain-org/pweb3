@@ -1,7 +1,7 @@
 /* jshint ignore:start */
 Package.describe({
   name: 'pchain:web3',
-  version: '1.1.5',
+  version: '1.1.6',
   summary: 'Pchain JavaScript API, middleware to talk to a pchain node over RPC',
   git: 'https://github.com/pchain-org/pweb3',
   // By default, Meteor will default to using README.md for documentation.

@@ -1830,9 +1830,15 @@ module.exports = function (from, pubKey,amount,salt) {
 
     salt =  Buffer.from(salt).toString("hex");
 
-    var  concatString = from+pubKey+amount+salt;
+    var saltCode = "";
+    for(var i=0;i<salt.length;i++){
+        saltCode += salt[i].charCodeAt().toString("16");
+    }
+
+    var  concatString = from+pubKey+amount+saltCode;
 
     return "0x" + sha3(concatString.toLowerCase(),{encoding: 'hex'});
+
 };
 
 
@@ -1942,10 +1948,15 @@ var unitMap = {
     'milliether':   '1000000000000000',
     'milli':        '1000000000000000',
     'ether':        '1000000000000000000',
+    'pi':        '1000000000000000000',
     'kether':       '1000000000000000000000',
+    'kpi':       '1000000000000000000000',
     'grand':        '1000000000000000000000',
     'mether':       '1000000000000000000000000',
+    'mpi':       '1000000000000000000000000',
     'gether':       '1000000000000000000000000000',
+    'gpi':       '1000000000000000000000000000',
+    'tpi':       '1000000000000000000000000000000',
     'tether':       '1000000000000000000000000000000'
 };
 
@@ -2522,7 +2533,7 @@ module.exports = {
 
 },{"./sha3.js":20,"bignumber.js":"bignumber.js","utf8":128}],22:[function(require,module,exports){
 module.exports={
-    "version": "1.1.5"
+    "version": "1.1.6"
 }
 
 },{}],23:[function(require,module,exports){
@@ -2589,6 +2600,7 @@ function Web3 (provider) {
     this._requestManager = new RequestManager(provider);
     this.currentProvider = provider;
     this.eth = new Eth(this);
+    this.pi = new Eth(this);
     this.chain = new Chain(this);
     this.tdm = new Tdm(this);
     this.del = new Del(this);
