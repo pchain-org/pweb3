@@ -2533,7 +2533,7 @@ module.exports = {
 
 },{"./sha3.js":20,"bignumber.js":"bignumber.js","utf8":128}],22:[function(require,module,exports){
 module.exports={
-    "version": "1.1.6"
+    "version": "1.1.7"
 }
 
 },{}],23:[function(require,module,exports){

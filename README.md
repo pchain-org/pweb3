@@ -81,8 +81,8 @@ web3.setProvider(new web3.providers.HttpProvider('http://' + BasicAuthUsername +
 There you go, now you can use it:
 
 ```js
-var coinbase = web3.eth.coinbase;
-var balance = web3.eth.getBalance(coinbase);
+var coinbase = web3.pi.coinbase;
+var balance = web3.pi.getBalance(coinbase);
 ```
 
 You can find more examples in the [`example`](https://github.com/pchain-org/pweb3/tree/master/example) directory.
