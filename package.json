@@ -1,7 +1,7 @@
 {
   "name": "pweb3",
   "namespace": "pchain",
-  "version": "1.1.7",
+  "version": "1.1.9",
   "description": "Pchain JavaScript API, middleware to talk to a pchain node over RPC",
   "main": "./index.js",
   "directories": {

@@ -2533,7 +2533,7 @@ module.exports = {
 
 },{"./sha3.js":20,"bignumber.js":"bignumber.js","utf8":128}],22:[function(require,module,exports){
 module.exports={
-    "version": "1.1.7"
+    "version": "1.1.9"
 }
 
 },{}],23:[function(require,module,exports){
@@ -5534,12 +5534,20 @@ var methods = function () {
         inputFormatter: [formatters.inputAddressFormatter, null]
     });
 
+    var checkCandidate = new Method({
+        name: 'checkCandidate',
+        call: 'del_checkCandidate',
+        params: 2,
+        inputFormatter: [formatters.inputAddressFormatter, null]
+    });
+
     
     return [
         delegate,
         cancelDelegate,
         applyCandidate,
-        cancelCandidate
+        cancelCandidate,
+        checkCandidate
     ];
 };
 
@@ -5658,8 +5666,7 @@ var methods = function () {
         name: 'getFullBalance',
         call: 'eth_getFullBalance',
         params: 3,
-        inputFormatter: [formatters.inputAddressFormatter, formatters.inputDefaultBlockNumberFormatter,null],
-        outputFormatter: formatters.outputBigNumberFormatter
+        inputFormatter: [formatters.inputAddressFormatter, formatters.inputDefaultBlockNumberFormatter,null]
     });
 
     var getStorageAt = new Method({
