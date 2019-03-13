@@ -2533,7 +2533,7 @@ module.exports = {
 
 },{"./sha3.js":20,"bignumber.js":"bignumber.js","utf8":128}],22:[function(require,module,exports){
 module.exports={
-    "version": "1.1.9"
+    "version": "1.2.0"
 }
 
 },{}],23:[function(require,module,exports){
@@ -2657,12 +2657,9 @@ Web3.prototype.toChecksumAddress = utils.toChecksumAddress;
 Web3.prototype.isIBAN = utils.isIBAN;
 Web3.prototype.padLeft = utils.padLeft;
 Web3.prototype.padRight = utils.padRight;
-
 Web3.prototype.getVoteHash =  function(from,pubKey,amount,salt){
     return getVoteHash(from,pubKey,amount,salt);
 };
-
-
 Web3.prototype.sha3 = function(string, options){
     return '0x' + sha3(string, options);
 };
@@ -6420,15 +6417,15 @@ var methods = function () {
     var voteNextEpoch = new Method({
         name: 'voteNextEpoch',
         call: 'tdm_voteNextEpoch',
-        params: 2,
-        inputFormatter: [formatters.inputAddressFormatter, null]
+        params: 3,
+        inputFormatter: [formatters.inputAddressFormatter, null,null]
     });
 
     var revealVote = new Method({
         name: 'revealVote',
         call: 'tdm_revealVote',
-        params: 4,
-        inputFormatter: [formatters.inputAddressFormatter, null,null,null]
+        params: 6,
+        inputFormatter: [formatters.inputAddressFormatter, null,null,null,null,null]
     });
 
     var getCurrentEpochNumber = new Method({
