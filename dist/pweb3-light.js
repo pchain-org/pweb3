@@ -1790,7 +1790,6 @@ module.exports = {
 
 
 },{"bignumber.js":"bignumber.js"}],19:[function(require,module,exports){
-(function (Buffer){
 /*
     This file is part of web3.js.
 
@@ -1828,23 +1827,16 @@ module.exports = function (from, pubKey,amount,salt) {
 
     amount = (amount.length%2 == 0)?amount:("0"+amount);
 
-    salt =  Buffer.from(salt).toString("hex");
-
-    var saltCode = "";
-    for(var i=0;i<salt.length;i++){
-        saltCode += salt[i].charCodeAt().toString("16");
-    }
-
-    var  concatString = from+pubKey+amount+saltCode;
-
-    return "0x" + sha3(concatString.toLowerCase(),{encoding: 'hex'});
-
+   var saltCode = "";
+   for(var i=0;i<salt.length;i++){
+    saltCode += salt[i].charCodeAt().toString("16");
+   }
+   var  concatString = from+pubKey+amount+saltCode;
+   return "0x" + sha3(concatString.toLowerCase(),{encoding: 'hex'});
 };
 
 
-}).call(this,require("buffer").Buffer)
-
-},{"./sha3":20,"buffer":58}],20:[function(require,module,exports){
+},{"./sha3":20}],20:[function(require,module,exports){
 /*
     This file is part of web3.js.
 
@@ -2533,7 +2525,7 @@ module.exports = {
 
 },{"./sha3.js":20,"bignumber.js":"bignumber.js","utf8":128}],22:[function(require,module,exports){
 module.exports={
-    "version": "1.2.0"
+    "version": "1.2.1"
 }
 
 },{}],23:[function(require,module,exports){
