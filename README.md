@@ -27,13 +27,6 @@ yarn add pweb3
 ### As a Browser module
 
 
-Bower
-
-```bash
-bower install pweb3
-```
-
-
 ## Usage
 
 ```js
