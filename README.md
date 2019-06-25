@@ -32,9 +32,9 @@ meteor npm install --save pweb3@1.x
 ## Usage
 
 ```js
-import Web3 from 'pweb3';
+var Web3 = require("pweb3");
 
-const web3 = new Web3('ws://localhost:8546');
+const web3 = new Web3('ws://localhost:6970/pchain');
 console.log(web3);
 > {
     eth: ... ,
@@ -47,9 +47,16 @@ console.log(web3);
 Additionally you can set a provider using `web3.setProvider()` (e.g. WebsocketProvider)
 
 ```js
-web3.setProvider('ws://localhost:8546');
+
+web3.setProvider('ws://localhost:6970/pchain');
+
 // or
-web3.setProvider(new Web3.providers.WebsocketProvider('ws://localhost:8546'));
+
+// Set the provider you want from Web3.providers
+web3.setProvider(new Web3.providers.WebsocketProvider('ws://localhost:6970/pchain'));
+//'pchain' is the chain id of Main Chain,if you want to connect to child chain,you need to replace 'pchain' to child chain id.The first child chain id is 'child_0'
+  
+
 ```
 
 There you go, now you can use it:
@@ -67,7 +74,7 @@ You can use `pweb3.js` as follows:
 
 ```typescript
 import Web3 from 'pweb3';
-const web3 = new Web3("ws://localhost:8546");
+const web3 = new Web3("ws://localhost:6970/pchain");
 ```
 
 If you are using the types in a `commonjs` module like for example a node app you just have to enable `esModuleInterop` in your `tsconfig` compile option, also enable `allowSyntheticDefaultImports` for typesystem compatibility:
@@ -103,6 +110,11 @@ npm run clean # removes all the node_modules folders in all modules
 npm run dev # runs rollup with a watcher
 
 ```
+
+
+## License
+
+[LGPL-3.0+](LICENSE.md) © 2018 Contributors
 
 
 [repo]: https://github.com/pchain-org/pweb3
