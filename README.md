@@ -64,10 +64,10 @@ web3.eth.getAccounts()
 
 We support types within the repo itself. Please open an issue here if you find any wrong types.
 
-You can use `web3.js` as follows:
+You can use `pweb3.js` as follows:
 
 ```typescript
-import Web3 from 'web3';
+import Web3 from 'pweb3';
 const web3 = new Web3("ws://localhost:8546");
 ```
 
@@ -104,3 +104,19 @@ npm run clean # removes all the node_modules folders in all modules
 npm run dev # runs rollup with a watcher
 
 ```
+
+
+[repo]: https://github.com/pchain-org/pweb3
+[docs]: http://web3js.readthedocs.io/en/1.0/
+[npm-image]: https://badge.fury.io/js/web3.png
+[npm-url]: https://npmjs.org/package/pweb3
+[travis-image]: https://travis-ci.org/ethereum/web3.js.svg
+[travis-url]: https://travis-ci.org/ethereum/web3.js
+[dep-image]: https://david-dm.org/ethereum/web3.js.svg
+[dep-url]: https://david-dm.org/ethereum/web3.js
+[dep-dev-image]: https://david-dm.org/ethereum/web3.js/dev-status.svg
+[dep-dev-url]: https://david-dm.org/ethereum/web3.js#info=devDependencies
+[coveralls-image]: https://coveralls.io/repos/ethereum/web3.js/badge.svg?branch=master
+[coveralls-url]: https://coveralls.io/r/ethereum/web3.js?branch=master
+[waffle-image]: https://badge.waffle.io/ethereum/web3.js.svg?label=ready&title=Ready
+[waffle-url]: https://waffle.io/ethereum/web3.js
