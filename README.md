@@ -1,14 +1,13 @@
-# pweb3.js - PCHAIN JavaScript API
+# Pchain JavaScript API
 
-[![npm](https://img.shields.io/npm/dm/web3.svg)](https://www.npmjs.com/package/web3) [![Build Status][travis-image]][travis-url] ![Coverage Status](https://coveralls.io/repos/github/ethereum/web3.js/badge.svg?branch=1.0&kill_cache=1)
-[![Join the chat at https://gitter.im/ethereum/web3.js](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ethereum/web3.js?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+This is the Pchain compatible [JavaScript API](https://github.com/pchain-org/pweb3/wiki/JavaScript-API)
+which implements the [Generic JSON RPC](https://github.com/pchain-org/pchain/wiki/JSON-RPC#chain_createchildchain) spec. It's available on npm as a node module, for Bower and component as embeddable scripts.
 
-This is the Ethereum [JavaScript API][docs]
-which connects to the [Generic JSON RPC](https://github.com/ethereum/wiki/wiki/JSON-RPC) spec.
 
-You need to run a local or remote Ethereum node to use this library.
+You need to run a local Pchain node to use this library.
 
-Please read the [documentation][docs] for more.
+[Documentation](https://github.com/pchain-org/pweb3/wiki/JavaScript-API)
+
 
 ## Installation
 
@@ -24,18 +23,20 @@ npm install pweb3
 yarn add pweb3
 ```
 
-### Meteor
+### As a Browser module
+
+Bower
 
 ```bash
-meteor npm install --save pweb3@1.x
+bower install pweb3
 ```
 
 ## Usage
 
 ```js
-import Web3 from 'pweb3';
+var Web3 = require("pweb3");
 
-const web3 = new Web3('ws://localhost:8546');
+var web3 = new Web3('ws://localhost:6970/pchain');
 console.log(web3);
 > {
     eth: ... ,
@@ -48,9 +49,14 @@ console.log(web3);
 Additionally you can set a provider using `web3.setProvider()` (e.g. WebsocketProvider)
 
 ```js
-web3.setProvider('ws://localhost:8546');
+
+web3.setProvider('ws://localhost:6970/pchain');
+
 // or
-web3.setProvider(new Web3.providers.WebsocketProvider('ws://localhost:8546'));
+
+  // Set the provider you want from Web3.providers
+  web3.setProvider(new Web3.providers.WebsocketProvider('ws://localhost:6970/pchain'));
+  //'pchain' is the chain id of Main Chain,if you want to connect to child chain,you need to replace 'pchain' to child chain id.The first child chain id is 'child_0'
 ```
 
 There you go, now you can use it:
@@ -68,7 +74,7 @@ You can use `pweb3.js` as follows:
 
 ```typescript
 import Web3 from 'pweb3';
-const web3 = new Web3("ws://localhost:8546");
+const web3 = new Web3("ws://localhost:6970/pchain");
 ```
 
 If you are using the types in a `commonjs` module like for example a node app you just have to enable `esModuleInterop` in your `tsconfig` compile option, also enable `allowSyntheticDefaultImports` for typesystem compatibility:
@@ -104,6 +110,11 @@ npm run clean # removes all the node_modules folders in all modules
 npm run dev # runs rollup with a watcher
 
 ```
+
+
+## License
+
+[LGPL-3.0+](LICENSE.md) © 2019 Contributors
 
 
 [repo]: https://github.com/pchain-org/pweb3
