@@ -24,12 +24,6 @@ npm install pweb3
 yarn add pweb3
 ```
 
-// ### Meteor
-
-// ```bash
-// meteor npm install --save pweb3@1.x
-// ```
-
 ## Usage
 
 ```js
