@@ -23,11 +23,16 @@ npm install pweb3
 yarn add pweb3
 ```
 
-### Meteor
+
+### As a Browser module
+
+
+Bower
 
 ```bash
-meteor npm install --save pweb3@1.x
+bower install pweb3
 ```
+
 
 ## Usage
 
