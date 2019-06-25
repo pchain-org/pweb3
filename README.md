@@ -23,10 +23,6 @@ npm install pweb3
 yarn add pweb3
 ```
 
-
-### As a Browser module
-
-
 ## Usage
 
 ```js
