@@ -1,122 +1,143 @@
-# Pchain JavaScript API
 
-This is the Pchain compatible [JavaScript API](https://github.com/pchain-org/pweb3/wiki/JavaScript-API)
-which implements the [Generic JSON RPC](https://github.com/pchain-org/pchain/wiki/JSON-RPC#chain_createchildchain) spec. It's available on npm as a node module, for Bower and component as embeddable scripts.
+![Web3.js logo](assets/web3js.svg)
 
+# web3.js - Ethereum JavaScript API
 
-You need to run a local Pchain node to use this library.
+[![npm](https://img.shields.io/npm/dm/web3.svg)](https://www.npmjs.com/package/web3) [![Build Status][travis-image]][travis-url] ![Coverage Status](https://coveralls.io/repos/github/ethereum/web3.js/badge.svg?branch=1.0&kill_cache=1)
+[![Join the chat at https://gitter.im/ethereum/web3.js](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ethereum/web3.js?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-[Documentation](https://github.com/pchain-org/pweb3/wiki/JavaScript-API)
+This is the Ethereum [JavaScript API][docs]
+which connects to the [Generic JSON RPC](https://github.com/ethereum/wiki/wiki/JSON-RPC) spec.
 
-## Table of Contents
+You need to run a local or remote Ethereum node to use this library.
 
-- [Installation](#installation)
-  - [Node.js](#nodejs)
-  - [Yarn](#yarn)
-  - [As a Browser module](#as-a-browser-module)
-- [Usage](#usage)
-  - [Latest Version](#usage)
-- [Contribute!](#contribute)
-  - [Requirements](#requirements)
-  - [Building (gulp)](#building-gulp)
-  - [Testing (mocha)](#testing-mocha)
-- [License](#license)
+Please read the [documentation][docs] for more.
 
 ## Installation
 
-### Node.js
+### Node
 
 ```bash
-npm install pweb3
+npm install web3
 ```
 
 ### Yarn
 
 ```bash
-yarn add pweb3
+yarn add web3
 ```
 
-```
-
-### As a Browser module
-
-
-Bower
+### Meteor
 
 ```bash
-bower install pweb3
+meteor npm install --save web3@1.x
 ```
-
-
-* Include `pweb3.min.js` in your html file. (not required for the meteor package)
 
 ## Usage
 
-Use the `web3` object directly from the global namespace:
-
 ```js
-var Web3 = require("pweb3");
-var web3 = new Web3();
-console.log(web3); // {eth: .., shh: ...} // It's here!
-```
+import Web3 from 'web3';
 
-Set a provider (`HttpProvider`):
-
-```js
-if (typeof web3 !== 'undefined') {
-  web3 = new Web3(web3.currentProvider);
-} else {
-  // Set the provider you want from Web3.providers
-  web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:6969/pchain"));
-  //'pchain' is the chain id of Main Chain,if you want to connect to child chain,you need to replace 'pchain' to child chain id.The first child chain id is 'child_0'
+const web3 = new Web3('ws://localhost:8546');
+console.log(web3);
+> {
+    eth: ... ,
+    shh: ... ,
+    utils: ...,
+    ...
 }
 ```
 
-Set a provider (`HttpProvider` using [HTTP Basic Authentication](https://en.wikipedia.org/wiki/Basic_access_authentication)):
+Additionally you can set a provider using `web3.setProvider()` (e.g. WebsocketProvider)
 
 ```js
-web3.setProvider(new web3.providers.HttpProvider('http://' + BasicAuthUsername + ':' + BasicAuthPassword + '@localhost:6969/pchain'));
+web3.setProvider('ws://localhost:8546');
+// or
+web3.setProvider(new Web3.providers.WebsocketProvider('ws://localhost:8546'));
 ```
 
 There you go, now you can use it:
 
 ```js
-var coinbase = web3.pi.coinbase;
-var balance = web3.pi.getBalance(coinbase);
+web3.eth.getAccounts()
+.then(console.log);
 ```
 
-You can find more examples in the [`example`](https://github.com/pchain-org/pweb3/tree/master/example) directory.
+### Usage with TypeScript
 
+We support types within the repo itself. Please open an issue here if you find any wrong types.
+
+You can use `web3.js` as follows:
+
+```typescript
+import Web3 from 'web3';
+const web3 = new Web3("ws://localhost:8546");
 ```
-## Contribute!
+
+If you are using the types in a `commonjs` module like for example a node app you just have to enable `esModuleInterop` in your `tsconfig` compile option, also enable `allowSyntheticDefaultImports` for typesystem compatibility:
+
+```js
+"compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    ....
+```
+
+## Documentation
+
+Documentation can be found at [read the docs][docs]
+
+## Contributing
+
+- All contributions have to go into the 1.0 branch
+- Please follow the code style of the other files, we use 4 spaces as tabs.
 
 ### Requirements
 
-* Node.js
+* [Node.js](https://nodejs.org)
 * npm
 
+### Commands
 ```bash
-# On Linux:
-sudo apt-get update
-sudo apt-get install nodejs
-sudo apt-get install npm
-sudo apt-get install nodejs-legacy
+npm install # install all dependencies for npm run bootstrap
+npm run bootstrap # install all dependencies and symlinks the internal modules for all modules
+npm run build # runs rollup
+npm run test # runs all tests 
+npm run clean # removes all the node_modules folders in all modules
+npm run dev # runs rollup with a watcher
+
 ```
 
-### Building (gulp)
+### Support
 
-```bash
-npm run-script build
-```
+![browsers](https://img.shields.io/badge/browsers-latest%202%20versions-brightgreen.svg)
+![node](https://img.shields.io/badge/node->=8-green.svg)
 
-
-### Testing (mocha)
-
-```bash
-npm test
-```
+### Community
+ - [Gitter](https://gitter.im/ethereum/web3.js?source=orgpage)
+ - [Forum](https://forum.ethereum.org/categories/ethereum-js)
 
 
-## License
+### Similar libraries in other languages
+ - Python [Web3.py](https://github.com/pipermerriam/web3.py)
+ - Haskell [hs-web3](https://github.com/airalab/hs-web3)
+ - Java [web3j](https://github.com/web3j/web3j)
+ - Scala [web3j-scala](https://github.com/mslinn/web3j-scala)
+ - Purescript [purescript-web3](https://github.com/f-o-a-m/purescript-web3)
+ - PHP [web3.php](https://github.com/sc0Vu/web3.php)
 
-[LGPL-3.0+](LICENSE.md) © 2018 Contributors
+
+[repo]: https://github.com/ethereum/web3.js
+[docs]: http://web3js.readthedocs.io/en/1.0/
+[npm-image]: https://badge.fury.io/js/web3.png
+[npm-url]: https://npmjs.org/package/web3
+[travis-image]: https://travis-ci.org/ethereum/web3.js.svg
+[travis-url]: https://travis-ci.org/ethereum/web3.js
+[dep-image]: https://david-dm.org/ethereum/web3.js.svg
+[dep-url]: https://david-dm.org/ethereum/web3.js
+[dep-dev-image]: https://david-dm.org/ethereum/web3.js/dev-status.svg
+[dep-dev-url]: https://david-dm.org/ethereum/web3.js#info=devDependencies
+[coveralls-image]: https://coveralls.io/repos/ethereum/web3.js/badge.svg?branch=master
+[coveralls-url]: https://coveralls.io/r/ethereum/web3.js?branch=master
+[waffle-image]: https://badge.waffle.io/ethereum/web3.js.svg?label=ready&title=Ready
+[waffle-url]: https://waffle.io/ethereum/web3.js
