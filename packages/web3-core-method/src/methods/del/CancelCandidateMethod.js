@@ -13,6 +13,6 @@ export default class CancelCandidateMethod extends AbstractMethod {
      * @constructor
      */
     constructor(utils, formatters, moduleInstance) {
-        super('chain_cancelCandidate', 1, utils, formatters, moduleInstance);
+        super('del_cancelCandidate', 1, utils, formatters, moduleInstance);
     }
 }

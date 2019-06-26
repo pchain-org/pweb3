@@ -13,6 +13,6 @@ export default class ApplyCandidateMethod extends AbstractMethod {
      * @constructor
      */
     constructor(utils, formatters, moduleInstance) {
-        super('chain_applyCandidate', 3, utils, formatters, moduleInstance);
+        super('del_applyCandidate', 3, utils, formatters, moduleInstance);
     }
 }

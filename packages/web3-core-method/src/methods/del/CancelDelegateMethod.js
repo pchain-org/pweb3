@@ -13,6 +13,6 @@ export default class CancelDelegateMethod extends AbstractMethod {
      * @constructor
      */
     constructor(utils, formatters, moduleInstance) {
-        super('chain_cancelDelegate', 3, utils, formatters, moduleInstance);
+        super('del_cancelDelegate', 3, utils, formatters, moduleInstance);
     }
 }

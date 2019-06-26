@@ -13,6 +13,6 @@ export default class DelegateMethod extends AbstractMethod {
      * @constructor
      */
     constructor(utils, formatters, moduleInstance) {
-        super('chain_delegate', 3, utils, formatters, moduleInstance);
+        super('del_delegate', 3, utils, formatters, moduleInstance);
     }
 }

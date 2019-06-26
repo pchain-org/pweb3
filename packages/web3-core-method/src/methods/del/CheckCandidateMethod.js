@@ -13,6 +13,6 @@ export default class CheckCandidateMethod extends AbstractMethod {
      * @constructor
      */
     constructor(utils, formatters, moduleInstance) {
-        super('chain_checkCandidate', 2, utils, formatters, moduleInstance);
+        super('del_checkCandidate', 2, utils, formatters, moduleInstance);
     }
 }
