@@ -9,19 +9,6 @@ You need to run a local Pchain node to use this library.
 [Documentation](https://github.com/pchain-org/pweb3/wiki/JavaScript-API)
 
 
-## Installation
-
-### Node
-
-```bash
-npm install pweb3
-```
-
-### Yarn
-
-```bash
-yarn add pweb3
-```
 
 ## Usage
 
