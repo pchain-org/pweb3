@@ -29,12 +29,12 @@ Additionally you can set a provider using `web3.setProvider()` (e.g. WebsocketPr
 
 ```js
 
-web3.setProvider('ws://localhost:6970/pchain');
+web3 = new Web3('ws://localhost:6970/pchain');
 
 // or
 
 // Set the provider you want from Web3.providers
-web3.setProvider(new Web3.providers.WebsocketProvider('ws://localhost:6970/pchain'));
+web3 = new Web3(new Web3.providers.WebsocketProvider('ws://localhost:6970/pchain'));
 //'pchain' is the chain id of Main Chain,if you want to connect to child chain,you need to replace 'pchain' to child chain id.The first child chain id is 'child_0'
   
 
