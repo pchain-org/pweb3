@@ -6,7 +6,7 @@ which implements the [Generic JSON RPC](https://github.com/pchain-org/pchain/wik
 
 You need to run a local Pchain node to use this library.
 
-[Documentation](https://github.com/pchain-org/pweb3/wiki/JavaScript-API)
+[Documentation](https://web3js.readthedocs.io/en/1.0/)
 
 
 
