@@ -1,7 +1,7 @@
 {
     "name": "pweb3",
     "namespace": "pchain",
-    "version": "1.0.0-beta.2",
+    "version": "1.0.0",
     "description": "Pchain JavaScript API wrapper repository",
     "license": "LGPL-3.0",
     "main": "./packages/web3/src/index.js",
