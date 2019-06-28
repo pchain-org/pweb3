@@ -11,5 +11,6 @@ export default rollupConfig('Web3', pkg.name, {
     'web3-tdm': 'web3-tdm',
     'web3-chain': 'web3-chain',
     'web3-del': 'web3-del',
+    'web3-pi': 'web3-pi',
     'web3-net': 'web3-net'
 });

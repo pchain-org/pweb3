@@ -27,6 +27,7 @@ import {Shh} from 'web3-shh';
 import {Tdm} from 'web3-tdm';
 import {Chain} from 'web3-chain';
 import {Del} from 'web3-del';
+import {Pi} from 'web3-pi';
 import {Personal} from 'web3-eth-personal';
 
 export default class Web3 extends AbstractWeb3Module {
@@ -45,6 +46,7 @@ export default class Web3 extends AbstractWeb3Module {
     tdm: Tdm;
     chain: Chain;
     del: Del;
+    pi: Pi;
     version: string;
 }
 
@@ -55,6 +57,7 @@ export interface Modules {
     Shh: new (provider: provider, net: net.Socket) => Shh;
     Tdm: new (provider: provider, net: net.Socket) => Tdm;
     Chain: new (provider: provider, net: net.Socket) => Chain;
-    del: new (provider: provider, net: net.Socket) => Chain;
+    del: new (provider: provider, net: net.Socket) => Del;
+    pi: new (provider: provider, net: net.Socket) => Pi;
 
 }

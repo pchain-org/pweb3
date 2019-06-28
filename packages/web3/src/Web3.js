@@ -26,6 +26,7 @@ import {AbstractWeb3Module} from 'web3-core';
 import {ProviderDetector, ProvidersModuleFactory} from 'web3-providers';
 import * as Utils from 'web3-utils';
 import {Eth} from 'web3-eth';
+import {Pi} from 'web3-pi';
 import {Shh} from 'web3-shh';
 import {Network} from 'web3-net';
 import {Personal} from 'web3-eth-personal';
@@ -44,12 +45,12 @@ export default class Web3 extends AbstractWeb3Module {
      */
     constructor(provider, net, options = {}) {
         super(provider, options, null, net);
-
         this.eth = new Eth(this.currentProvider, net, options);
         this.shh = new Shh(this.currentProvider, net, options);
         this.tdm = new Tdm(this.currentProvider, net, options);
         this.chain = new Chain(this.currentProvider, net, options);
         this.del = new Del(this.currentProvider, net, options);
+        this.pi = new Pi(this.currentProvider, net, options);
         this.utils = Utils;
         this.version = version;
     }
@@ -285,10 +286,13 @@ export default class Web3 extends AbstractWeb3Module {
                 return new Tdm(providerResolver.resolve(provider, net), options);
             },
             Chain: (provider, options, net) => {
-                return new Tdm(providerResolver.resolve(provider, net), options);
+                return new Chain(providerResolver.resolve(provider, net), options);
             },
             Del: (provider, options, net) => {
-                return new Tdm(providerResolver.resolve(provider, net), options);
+                return new Del(providerResolver.resolve(provider, net), options);
+            },
+            Pi: (provider, options, net) => {
+                return new Pi(providerResolver.resolve(provider, net), options);
             }
         };
     }
