@@ -29,7 +29,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/pchain-org/pweb3.git"
+        "url": "https://github.com/pchain-org/pweb3/tree/pweb3-1.x"
     },
     "homepage": "https://github.com/pchain-org/pweb3",
     "bugs": {
