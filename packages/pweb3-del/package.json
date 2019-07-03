@@ -2,7 +2,7 @@
     "name": "pweb3-del",
     "namespace": "pchain",
     "version": "1.0.0-beta.55",
-    "description": "Web3 module to interact with the Ethereum del properties.",
+    "description": "Web3 module to interact with the Pchain del properties.",
     "repository": "https://github.com/pchain-org/pweb3/tree/pweb3-1.x/packages/pweb3-del",
     "license": "LGPL-3.0",
     "main": "dist/pweb3-del.cjs.js",

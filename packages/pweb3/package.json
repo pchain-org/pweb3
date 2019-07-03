@@ -1,13 +1,13 @@
 {
     "name": "pweb3",
     "namespace": "pchain",
-    "version": "1.0.0-beta.1",
+    "version": "1.0.0-beta.55",
     "description": "Pchain JavaScript API",
     "repository": "https://github.com/pchain-org/pweb3/tree/pweb3-1.x/packages/pweb3",
     "license": "LGPL-3.0",
-    "main": "dist/pweb3.cjs.js",
-    "module": "dist/pweb3.esm.js",
-    "browser": "dist/pweb3.umd.js",
+    "main": "dist/ptestweb3.cjs.js",
+    "module": "dist/ptestweb3.esm.js",
+    "browser": "dist/ptestweb3.umd.js",
     "bugs": {
         "url": "https://github.com/pchain-org/pweb3/issues"
     },
