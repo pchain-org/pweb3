@@ -1,6 +1,6 @@
 <!---------------------------------------------------------------------------------------
 
-Welcome to the PWeb3.js Issue Template!
+Welcome to the Web3.js Issue Template!
 
 If you're new around here, reading this will make sure you're helped ASAP.
 The more details you include, the better the community will be able to help you!

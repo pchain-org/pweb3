@@ -93,7 +93,6 @@ export default class MethodFactory extends AbstractMethodFactory {
             getTransactionReceipt: GetTransactionReceiptMethod,
             getTransactionCount: GetTransactionCountMethod,
             sendSignedTransaction: SendRawTransactionMethod,
-            sendRawTransaction: SendRawTransactionMethod,
             signTransaction: EthSignTransactionMethod,
             sendTransaction: EthSendTransactionMethod,
             sign: EthSignMethod,
