@@ -15,12 +15,12 @@ The ``web3-pi`` package allows you to interact with an Pchain blockchain itself 
     import {Pi} from 'pweb3-pi';
 
     // "Web3.givenProvider" will be set if in an Pchain supported browser.
-    const pi = new Pi(Web3.givenProvider || 'ws://some.local-or-remote.node:8546', null, options);
+    const pi = new Pi(Web3.givenProvider || 'ws://some.local-or-remote.node:6970/pchain', null, options);
 
 
     // or using the web3 umbrella package
 
-    const web3 = new Web3(Web3.givenProvider || 'ws://some.local-or-remote.node:8546', null, options);
+    const web3 = new Web3(Web3.givenProvider || 'ws://some.local-or-remote.node:6970/pchain', null, options);
 
     // -> web3.pi
 

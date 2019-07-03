@@ -17,7 +17,7 @@ The ``web3.pi.Iban`` function lets convert Pchain addresses from and to IBAN and
     // or using the web3 umbrella package
 
     import Web3 from 'pweb3';
-    const web3 = new Web3(Web3.givenProvider || 'ws://some.local-or-remote.node:8546', null, options);
+    const web3 = new Web3(Web3.givenProvider || 'ws://some.local-or-remote.node:6970/pchain', null, options);
 
     // -> new web3.pi.Iban('XE7338O073KYGTWWZN0F2WZ0R8PX5ZPPZS')
 

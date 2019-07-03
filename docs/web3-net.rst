@@ -16,11 +16,11 @@ The ``web3-net`` package allows you to interact with the Pchain nodes network pr
     import {Net} from 'web3-net';
 
     // "Personal.providers.givenProvider" will be set if in an Pchain supported browser.
-    const net = new Net(Web3.givenProvider || 'ws://some.local-or-remote.node:8546', null, options);
+    const net = new Net(Web3.givenProvider || 'ws://some.local-or-remote.node:6970/pchain', null, options);
 
 
     // or using the web3 umbrella package
-    const web3 = new Web3(Web3.givenProvider || 'ws://some.local-or-remote.node:8546', null, options);
+    const web3 = new Web3(Web3.givenProvider || 'ws://some.local-or-remote.node:6970/pchain', null, options);
 
     // -> web3.pi.net
     // -> web3.shh.net

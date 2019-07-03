@@ -16,7 +16,7 @@ The ``web3-pi-txpool`` package gives you access to several non-standard RPC meth
     import {TxPool} from 'web3-pi-txpool';
 
     // "Web3.givenProvider" will be set if in an Pchain supported browser.
-    const txPool = new TxPool(Web3.givenProvider || 'ws://some.local-or-remote.node:8546', null, options);
+    const txPool = new TxPool(Web3.givenProvider || 'ws://some.local-or-remote.node:6970/pchain', null, options);
 
 
 ------------------------------------------------------------------------------

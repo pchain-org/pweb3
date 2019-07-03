@@ -29,7 +29,7 @@ Example
     import Web3 from 'pweb3';
 
     // "Web3.givenProvider" will be set in a Pchain supported browser.
-    const web3 = new Web3(Web3.givenProvider || 'ws://some.local-or-remote.node:8546', net, options);
+    const web3 = new Web3(Web3.givenProvider || 'ws://some.local-or-remote.node:6970/pchain', net, options);
 
     > web3.pi
     > web3.shh

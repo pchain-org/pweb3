@@ -29,22 +29,22 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/pchain-org/pweb3/tree/pweb3-1.x"
+        "url": "https://github.com/ethereum/web3.js.git"
     },
-    "homepage": "https://github.com/pchain-org/pweb3",
+    "homepage": "https://github.com/ethereum/web3.js",
     "bugs": {
-        "url": "https://github.com/pchain-org/pweb3/issues"
+        "url": "https://github.com/ethereum/web3.js/issues"
     },
     "keywords": [
-        "PCHAIN",
+        "Pchain",
         "JavaScript",
         "API"
     ],
-    "author": "PCHAIN Foundation",
+    "author": "Pchain Foundation",
     "authors": [
         {
-            "name": "PCHAIN",
-            "email": "PCHAIN@pchain.org",
+            "name": "Pchain Furter",
+            "email": "pchain@pchain.org",
             "homepage": "https://github.com/pchain-org"
         }
     ],

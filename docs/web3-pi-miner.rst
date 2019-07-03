@@ -15,7 +15,7 @@ The ``web3-pi-miner`` package allows you to remote control the node's mining ope
     import {Miner} from 'web3-pi-miner';
 
     // "Web3.givenProvider" will be set if in an Pchain supported browser.
-    const miner = new Miner(Web3.givenProvider || 'ws://some.local-or-remote.node:8546', null, options);
+    const miner = new Miner(Web3.givenProvider || 'ws://some.local-or-remote.node:6970/pchain', null, options);
 
 
 ------------------------------------------------------------------------------
