@@ -99,7 +99,7 @@ npm run dev # runs rollup with a watcher
 
 
 [repo]: https://github.com/pchain-org/pweb3
-[docs]: http://web3js.readthedocs.io/en/1.0/
+[docs]: https://pweb3-10.readthedocs.io/en/latest/
 [npm-image]: https://badge.fury.io/js/web3.png
 [npm-url]: https://npmjs.org/package/pweb3
 [travis-image]: https://travis-ci.org/ethereum/web3.js.svg
