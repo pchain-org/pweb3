@@ -1,33 +1,33 @@
-.. _eth-ens:
+.. _pi-ens:
 
 .. include:: include_announcement.rst
 
 ============
-web3.eth.ens
+web3.pi.ens
 ============
 
-The ``web3.eth.ens`` functions let you interacting with the Ens smart contracts.
+The ``web3.pi.ens`` functions let you interacting with the Ens smart contracts.
 
 .. code-block:: javascript
 
-    import Web3 from 'web3';
-    import {Ens} from 'web3-eth-ens';
-    import {Accounts} from 'web3-eth-accounts';
+    import Web3 from 'pweb3';
+    import {Ens} from 'web3-pi-ens';
+    import {Accounts} from 'web3-pi-accounts';
 
-    // "Web3.givenProvider" will be set if in an Ethereum supported browser.
-    const eth = new Ens(
-        Web3.givenProvider || 'ws://some.local-or-remote.node:8546',
+    // "Web3.givenProvider" will be set if in an Pchain supported browser.
+    const pi = new Ens(
+        Web3.givenProvider || 'ws://some.local-or-remote.node:6970/pchain',
         null,
         options
-        new Accounts(Web3.givenProvider || 'ws://some.local-or-remote.node:8546', null, options)
+        new Accounts(Web3.givenProvider || 'ws://some.local-or-remote.node:6970/pchain', null, options)
     );
 
 
     // or using the web3 umbrella package
 
-    const web3 = new Web3(Web3.givenProvider || 'ws://some.local-or-remote.node:8546', null, options);
+    const web3 = new Web3(Web3.givenProvider || 'ws://some.local-or-remote.node:6970/pchain', null, options);
 
-    // -> web3.eth.ens
+    // -> web3.pi.ens
 
 ------------------------------------------------------------------------------
 
@@ -36,7 +36,7 @@ registry
 
 .. code-block:: javascript
 
-    web3.eth.ens.registry;
+    web3.pi.ens.registry;
 
 Returns the network specific Ens registry.
 
@@ -52,7 +52,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.registry;
+    web3.pi.ens.registry;
     > {
         ens: Ens,
         resolverContract: Contract | null,
@@ -69,9 +69,9 @@ resolver
 
 .. code-block:: javascript
 
-    web3.eth.ens.resolver(name);
+    web3.pi.ens.resolver(name);
 
-Returns the resolver contract to an Ethereum address.
+Returns the resolver contract to an Pchain address.
 
 -------
 Returns
@@ -85,7 +85,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.resolver('ethereum.eth').then((contract) => {
+    web3.pi.ens.resolver('pchain.pi').then((contract) => {
         console.log(contract);
     });
     > Contract<Resolver>
@@ -97,7 +97,7 @@ supportsInterface
 
 .. code-block:: javascript
 
-    web3.eth.ens.supportsInterface(ENSName, interfaceId, [callback]);
+    web3.pi.ens.supportsInterface(ENSName, interfaceId, [callback]);
 
 Checks if the current resolver does support the desired interface.
 
@@ -121,7 +121,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.supportsInterface('ethereum.eth', '0xbc1c58d1').then((supportsInterface) => {
+    web3.pi.ens.supportsInterface('pchain.pi', '0xbc1c58d1').then((supportsInterface) => {
         console.log(supportsInterface);
     })
     > true
@@ -133,9 +133,9 @@ getAddress
 
 .. code-block:: javascript
 
-    web3.eth.ens.getAddress(ENSName, [callback]);
+    web3.pi.ens.getAddress(ENSName, [callback]);
 
-Resolves an Ens name to an Ethereum address.
+Resolves an Ens name to an Pchain address.
 
 ----------
 Parameters
@@ -148,7 +148,7 @@ Parameters
 Returns
 -------
 
-``Promise<string>`` - The Ethereum address of the given name.
+``Promise<string>`` - The Pchain address of the given name.
 
 -------
 Example
@@ -156,7 +156,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.getAddress('ethereum.eth').then((address) => {
+    web3.pi.ens.getAddress('pchain.pi').then((address) => {
         console.log(address);
     })
     > 0xfB6916095ca1df60bB79Ce92cE3Ea74c37c5d359
@@ -168,7 +168,7 @@ setAddress
 
 .. code-block:: javascript
 
-    web3.eth.ens.setAddress(ENSName, address, options, [callback]);
+    web3.pi.ens.setAddress(ENSName, address, options, [callback]);
 
 Sets the address of an Ens name in his resolver.
 
@@ -192,8 +192,8 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.setAddress(
-        'ethereum.eth',
+    web3.pi.ens.setAddress(
+        'pchain.pi',
         '0xfB6916095ca1df60bB79Ce92cE3Ea74c37c5d359',
         {
             from: '0x9CC9a2c777605Af16872E0997b3Aeb91d96D5D8c'
@@ -205,8 +205,8 @@ Example
 
     // Or using the event emitter
 
-    web3.eth.ens.setAddress(
-        'ethereum.eth',
+    web3.pi.ens.setAddress(
+        'pchain.pi',
         '0xfB6916095ca1df60bB79Ce92cE3Ea74c37c5d359',
         {
             from: '0x9CC9a2c777605Af16872E0997b3Aeb91d96D5D8c'
@@ -225,7 +225,7 @@ Example
 
     // Or listen to the AddrChanged event on the resolver
 
-    web3.eth.ens.resolver('ethereum.eth').then((resolver) => {
+    web3.pi.ens.resolver('pchain.pi').then((resolver) => {
         resolver.events.AddrChanged({fromBlock: 0}, (error, event) => {
             console.log(event);
         })
@@ -248,7 +248,7 @@ getPubkey
 
 .. code-block:: javascript
 
-    web3.eth.ens.getPubkey(ENSName, [callback]);
+    web3.pi.ens.getPubkey(ENSName, [callback]);
 
 Returns the X and Y coordinates of the curve point for the public key.
 
@@ -271,7 +271,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.getPubkey('ethereum.eth').then((result) => {
+    web3.pi.ens.getPubkey('pchain.pi').then((result) => {
         console.log(result)
     });
     > {
@@ -288,7 +288,7 @@ setPubkey
 
 .. code-block:: javascript
 
-    web3.eth.ens.setPubkey(ENSName, x, y, options, [callback]);
+    web3.pi.ens.setPubkey(ENSName, x, y, options, [callback]);
 
 Sets the SECP256k1 public key associated with an Ens node
 
@@ -314,8 +314,8 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.setPubkey(
-        'ethereum.eth',
+    web3.pi.ens.setPubkey(
+        'pchain.pi',
         '0x0000000000000000000000000000000000000000000000000000000000000000',
         '0x0000000000000000000000000000000000000000000000000000000000000000',
         {
@@ -328,8 +328,8 @@ Example
 
     // Or using the event emitter
 
-    web3.eth.ens.setPubkey(
-        'ethereum.eth',
+    web3.pi.ens.setPubkey(
+        'pchain.pi',
         '0x0000000000000000000000000000000000000000000000000000000000000000',
         '0x0000000000000000000000000000000000000000000000000000000000000000',
         {
@@ -349,7 +349,7 @@ Example
 
     // Or listen to the PubkeyChanged event on the resolver
 
-    web3.eth.ens.resolver('ethereum.eth').then((resolver) => {
+    web3.pi.ens.resolver('pchain.pi').then((resolver) => {
         resolver.events.PubkeyChanged({fromBlock: 0}, function(error, event) {
             console.log(event);
         })
@@ -372,7 +372,7 @@ getText
 
 .. code-block:: javascript
 
-    web3.eth.ens.getText(ENSName, key, [callback]);
+    web3.pi.ens.getText(ENSName, key, [callback]);
 
 Returns the text by the given key.
 
@@ -396,7 +396,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.getText('ethereum.eth', 'key').then((result) => {
+    web3.pi.ens.getText('pchain.pi', 'key').then((result) => {
         console.log(result);
     });
     > "0000000000000000000000000000000000000000000000000000000000000000"
@@ -408,7 +408,7 @@ setText
 
 .. code-block:: javascript
 
-    web3.eth.ens.setText(ENSName, key, value, options, [callback]);
+    web3.pi.ens.setText(ENSName, key, value, options, [callback]);
 
 Sets the content hash associated with an Ens node.
 
@@ -434,8 +434,8 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.setText(
-        'ethereum.eth',
+    web3.pi.ens.setText(
+        'pchain.pi',
         'key',
         'value',
         {
@@ -448,8 +448,8 @@ Example
 
     // Or using the event emitter
 
-    web3.eth.ens.setText(
-        'ethereum.eth',
+    web3.pi.ens.setText(
+        'pchain.pi',
         'key',
         'value',
         {
@@ -469,7 +469,7 @@ Example
 
     // And listen to the TextChanged event on the resolver
 
-    web3.eth.ens.resolver('ethereum.eth').then((resolver) => {
+    web3.pi.ens.resolver('pchain.pi').then((resolver) => {
         resolver.events.TextChanged({fromBlock: 0}, (error, event) => {
             console.log(event);
         })
@@ -492,7 +492,7 @@ getContent
 
 .. code-block:: javascript
 
-    web3.eth.ens.getContent(ENSName, [callback]);
+    web3.pi.ens.getContent(ENSName, [callback]);
 
 Returns the content hash associated with an Ens node.
 
@@ -515,7 +515,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.getContent('ethereum.eth').then((result) => {
+    web3.pi.ens.getContent('pchain.pi').then((result) => {
         console.log(result);
     });
     > "0x0000000000000000000000000000000000000000000000000000000000000000"
@@ -527,7 +527,7 @@ setContent
 
 .. code-block:: javascript
 
-    web3.eth.ens.setContent(ENSName, hash, options, [callback]);
+    web3.pi.ens.setContent(ENSName, hash, options, [callback]);
 
 Sets the content hash associated with an Ens node.
 
@@ -552,8 +552,8 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.setContent(
-        'ethereum.eth',
+    web3.pi.ens.setContent(
+        'pchain.pi',
         '0x0000000000000000000000000000000000000000000000000000000000000000',
         {
             from: '0x9CC9a2c777605Af16872E0997b3Aeb91d96D5D8c'
@@ -565,8 +565,8 @@ Example
 
     // Or using the event emitter
 
-    web3.eth.ens.setContent(
-        'ethereum.eth',
+    web3.pi.ens.setContent(
+        'pchain.pi',
         '0x0000000000000000000000000000000000000000000000000000000000000000',
         {
             from: '0x9CC9a2c777605Af16872E0997b3Aeb91d96D5D8c'
@@ -585,7 +585,7 @@ Example
 
     // Or listen to the ContentChanged event on the resolver
 
-    web3.eth.ens.resolver('ethereum.eth').then((resolver) => {
+    web3.pi.ens.resolver('pchain.pi').then((resolver) => {
         resolver.events.ContentChanged({fromBlock: 0}, (error, event) => {
             console.log(event);
         })
@@ -608,7 +608,7 @@ getMultihash
 
 .. code-block:: javascript
 
-    web3.eth.ens.getMultihash(ENSName, [callback]);
+    web3.pi.ens.getMultihash(ENSName, [callback]);
 
 Returns the multihash associated with an Ens node.
 
@@ -631,7 +631,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.getMultihash('ethereum.eth').then((result) => {
+    web3.pi.ens.getMultihash('pchain.pi').then((result) => {
         console.log(result);
     });
     > 'QmXpSwxdmgWaYrgMUzuDWCnjsZo5RxphE3oW7VhTMSCoKK'
@@ -643,7 +643,7 @@ setMultihash
 
 .. code-block:: javascript
 
-    web3.eth.ens.setMultihash(ENSName, hash, options, [callback]);
+    web3.pi.ens.setMultihash(ENSName, hash, options, [callback]);
 
 Sets the multihash associated with an Ens node.
 
@@ -668,8 +668,8 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.setMultihash(
-        'ethereum.eth',
+    web3.pi.ens.setMultihash(
+        'pchain',
         'QmXpSwxdmgWaYrgMUzuDWCnjsZo5RxphE3oW7VhTMSCoKK',
         {
             from: '0x9CC9a2c777605Af16872E0997b3Aeb91d96D5D8c'
@@ -681,8 +681,8 @@ Example
 
     // Or using the event emitter
 
-    web3.eth.ens.setMultihash(
-        'ethereum.eth',
+    web3.pi.ens.setMultihash(
+        'pchain.pi',
         'QmXpSwxdmgWaYrgMUzuDWCnjsZo5RxphE3oW7VhTMSCoKK',
         {
             from: '0x9CC9a2c777605Af16872E0997b3Aeb91d96D5D8c'
@@ -709,7 +709,7 @@ getContenthash
 
 .. code-block:: javascript
 
-    web3.eth.ens.getContenthash(ENSName, [callback]);
+    web3.pi.ens.getContenthash(ENSName, [callback]);
 
 Returns the contenthash associated with an Ens node. `contenthash` encoding is defined in [EIP1577](http://eips.ethereum.org/EIPS/eip-1577)
 
@@ -732,7 +732,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.getContenthash('pac-txt.eth').then((result) => {
+    web3.pi.ens.getContenthash('pac-txt.pi').then((result) => {
         console.log(result);
     });
     > '0xe30101701220e08ea2458249e8f26aee72b95b39c33849a992a3eff40bd06d26c12197adef16'
@@ -744,7 +744,7 @@ setContenthash
 
 .. code-block:: javascript
 
-    web3.eth.ens.setContenthash(ENSName, hash, options, [callback]);
+    web3.pi.ens.setContenthash(ENSName, hash, options, [callback]);
 
 Sets the contenthash associated with an Ens node.
 
@@ -769,8 +769,8 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.setContenthash(
-        'ethereum.eth',
+    web3.pi.ens.setContenthash(
+        'pchain',
         '0xe301017012208cd82588c4e08268fa0b824caa93847ac843410076eeedc41d65fb52eccbb9e6',
         {
             from: '0x9CC9a2c777605Af16872E0997b3Aeb91d96D5D8c'
@@ -782,8 +782,8 @@ Example
 
     // Or using the event emitter
 
-    web3.eth.ens.setContenthash(
-        'ethereum.eth',
+    web3.pi.ens.setContenthash(
+        'pchain.pi',
         '0xe301017012208cd82588c4e08268fa0b824caa93847ac843410076eeedc41d65fb52eccbb9e6',
         {
             from: '0x9CC9a2c777605Af16872E0997b3Aeb91d96D5D8c'
@@ -828,7 +828,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.resolver('ethereum.eth').then((resolver) => {
+    web3.pi.ens.resolver('pchain.pi').then((resolver) => {
         resolver.events.AddrChanged({fromBlock: 0}, (error, event) => {
             console.log(event);
         })
@@ -877,7 +877,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.ens.resistry.then((registry) => {
+    web3.pi.ens.resistry.then((registry) => {
         registry.events.Transfer({fromBlock: 0}, (error, event) => {
               console.log(event);
           })

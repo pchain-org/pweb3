@@ -32,7 +32,7 @@ Example
 
 .. code-block:: javascript
 
-    import Web3 from 'web3';
+    import Web3 from 'pweb3';
 
     const options = {
         defaultAccount: '0x0',
@@ -45,7 +45,7 @@ Example
         transactionSigner: new CustomTransactionSigner()
     }
 
-    const web3 = new Web3('http://localhost:8545', null, options);
+    const web3 = new Web3('http://localhost:6969/pchain', null, options);
 
 ------------------------------------------------------------------------------
 
@@ -57,7 +57,7 @@ defaultBlock
 .. code-block:: javascript
 
     web3.defaultBlock
-    web3.eth.defaultBlock
+    web3.pi.defaultBlock
     web3.shh.defaultBlock
     ...
 
@@ -66,12 +66,12 @@ You can override it by passing the block parameter if a block is required.
 
 Example:
 
-- :ref:`web3.eth.getBalance() <eth-getbalance>`
-- :ref:`web3.eth.getCode() <eth-code>`
-- :ref:`web3.eth.getTransactionCount() <eth-gettransactioncount>`
-- :ref:`web3.eth.getStorageAt() <eth-getstorageat>`
-- :ref:`web3.eth.call() <eth-call>`
-- :ref:`new web3.eth.Contract() -> myContract.methods.myMethod().call() <contract-call>`
+- :ref:`web3.pi.getBalance() <pi-getbalance>`
+- :ref:`web3.pi.getCode() <pi-code>`
+- :ref:`web3.pi.getTransactionCount() <pi-gettransactioncount>`
+- :ref:`web3.pi.getStorageAt() <pi-getstorageat>`
+- :ref:`web3.pi.call() <pi-call>`
+- :ref:`new web3.pi.Contract() -> myContract.methods.myMethod().call() <contract-call>`
 
 -------
 Returns
@@ -96,7 +96,7 @@ defaultAccount
 .. code-block:: javascript
 
     web3.defaultAccount
-    web3.eth.defaultAccount
+    web3.pi.defaultAccount
     web3.shh.defaultAccount
     ...
 
@@ -106,7 +106,7 @@ This default address is used as the default ``"from"`` property, if no ``"from"`
 Returns
 -------
 
-``String`` - 20 Bytes: Any Ethereum address. You need to have the private key for that address in your node or keystore. (Default is ``undefined``)
+``String`` - 20 Bytes: Any Pchain address. You need to have the private key for that address in your node or keystore. (Default is ``undefined``)
 
 ------------------------------------------------------------------------------
 
@@ -118,7 +118,7 @@ defaultGasPrice
 .. code-block:: javascript
 
     web3.defaultGasPrice
-    web3.eth.defaultGasPrice
+    web3.pi.defaultGasPrice
     web3.shh.defaultGasPrice
     ...
 
@@ -141,7 +141,7 @@ defaultGas
 .. code-block:: javascript
 
     web3.defaultGas
-    web3.eth.defaultGas
+    web3.pi.defaultGas
     web3.shh.defaultGas
     ...
 
@@ -163,7 +163,7 @@ transactionBlockTimeout
 .. code-block:: javascript
 
     web3.transactionBlockTimeout
-    web3.eth.transactionBlockTimeout
+    web3.pi.transactionBlockTimeout
     web3.shh.transactionBlockTimeout
     ...
 
@@ -187,7 +187,7 @@ transactionConfirmationBlocks
 .. code-block:: javascript
 
     web3.transactionConfirmationBlocks
-    web3.eth.transactionConfirmationBlocks
+    web3.pi.transactionConfirmationBlocks
     web3.shh.transactionConfirmationBlocks
     ...
 
@@ -211,7 +211,7 @@ transactionPollingTimeout
 .. code-block:: javascript
 
     web3.transactionPollingTimeout
-    web3.eth.transactionPollingTimeout
+    web3.pi.transactionPollingTimeout
     web3.shh.transactionPollingTimeout
     ...
 
@@ -235,13 +235,13 @@ transactionSigner
 
 .. code-block:: javascript
 
-    web3.eth.transactionSigner
+    web3.pi.transactionSigner
     ...
 
 
 
 The ``transactionSigner`` property does provide us the possibility to customize the signing process
-of the ``Eth`` module and the related sub-modules.
+of the ``Pi`` module and the related sub-modules.
 
 The interface of a ``TransactionSigner``:
 
@@ -275,13 +275,13 @@ setProvider
 .. code-block:: javascript
 
     web3.setProvider(myProvider)
-    web3.eth.setProvider(myProvider)
+    web3.pi.setProvider(myProvider)
     web3.shh.setProvider(myProvider)
     ...
 
 Will change the provider for its module.
 
-.. note:: When called on the umbrella package ``web3`` it will also set the provider for all sub modules ``web3.eth``, ``web3.shh``, etc.
+.. note:: When called on the umbrella package ``web3`` it will also set the provider for all sub modules ``web3.pi``, ``web3.shh``, etc.
 
 ----------
 Parameters
@@ -302,26 +302,26 @@ Example
 
 .. code-block:: javascript
 
-    import Web3 from 'web3';
+    import Web3 from 'pweb3';
 
-    const web3 = new Web3('http://localhost:8545');
+    const web3 = new Web3('http://localhost:6969/pchain');
 
     // or
-    const web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:8545'));
+    const web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:6969/pchain'));
 
     // change provider
-    web3.setProvider('ws://localhost:8546');
+    web3.setProvider('ws://localhost:6970/pchain');
     // or
-    web3.setProvider(new Web3.providers.WebsocketProvider('ws://localhost:8546'));
+    web3.setProvider(new Web3.providers.WebsocketProvider('ws://localhost:6970/pchain'));
 
     // Using the IPC provider in node.js
     const net = require('net');
-    const web3 = new Web3('/Users/myuser/Library/Ethereum/geth.ipc', net); // mac os path
+    const web3 = new Web3('/Users/myuser/Library/Pchain/pchain.ipc', net); // mac os path
 
     // or
-    const web3 = new Web3(new Web3.providers.IpcProvider('/Users/myuser/Library/Ethereum/geth.ipc', net)); // mac os path
-    // on windows the path is: '\\\\.\\pipe\\geth.ipc'
-    // on linux the path is: '/users/myuser/.ethereum/geth.ipc'
+    const web3 = new Web3(new Web3.providers.IpcProvider('/Users/myuser/Library/Pchain/pchain.ipc', net)); // mac os path
+    // on windows the path is: '\\\\.\\pipe\\pchain.ipc'
+    // on linux the path is: '/users/myuser/.pchain/pchain.ipc'
 
 ------------------------------------------------------------------------------
 
@@ -331,7 +331,7 @@ providers
 .. code-block:: javascript
 
     Web3.providers
-    Eth.providers
+    Pi.providers
     ...
 
 Contains the current available providers.
@@ -352,20 +352,20 @@ Example
 
 .. code-block:: javascript
 
-    const Web3 = require('web3');
+    const Web3 = require('pweb3');
     // use the given Provider, e.g in Mist, or instantiate a new websocket provider
-    const web3 = new Web3(Web3.givenProvider || 'ws://localhost:8546');
+    const web3 = new Web3(Web3.givenProvider || 'ws://localhost:6970/pchain');
     // or
-    const web3 = new Web3(Web3.givenProvider || new Web3.providers.WebsocketProvider('ws://localhost:8546'));
+    const web3 = new Web3(Web3.givenProvider || new Web3.providers.WebsocketProvider('ws://localhost:6970/pchain'));
 
     // Using the IPC provider in node.js
     const net = require('net');
 
-    const web3 = new Web3('/Users/myuser/Library/Ethereum/geth.ipc', net); // mac os path
+    const web3 = new Web3('/Users/myuser/Library/Pchain/pchain.ipc', net); // mac os path
     // or
-    const web3 = new Web3(new Web3.providers.IpcProvider('/Users/myuser/Library/Ethereum/geth.ipc', net)); // mac os path
-    // on windows the path is: '\\\\.\\pipe\\geth.ipc'
-    // on linux the path is: '/users/myuser/.ethereum/geth.ipc'
+    const web3 = new Web3(new Web3.providers.IpcProvider('/Users/myuser/Library/Pchain/pchain.ipc', net)); // mac os path
+    // on windows the path is: '\\\\.\\pipe\\pchain.ipc'
+    // on linux the path is: '/users/myuser/.pchain/pchain.ipc'
 
 ------------------------------------------------------------------------------
 
@@ -375,11 +375,11 @@ givenProvider
 .. code-block:: javascript
 
     Web3.givenProvider
-    web3.eth.givenProvider
+    web3.pi.givenProvider
     web3.shh.givenProvider
     ...
 
-When using web3.js in an Ethereum compatible browser, it will set with the current native provider by that browser.
+When using web3.js in an Pchain compatible browser, it will set with the current native provider by that browser.
 Will return the given provider by the (browser) environment, otherwise ``null``.
 
 
@@ -395,7 +395,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.setProvider(Web3.givenProvider || 'ws://localhost:8546');
+    web3.setProvider(Web3.givenProvider || 'ws://localhost:6970/pchain');
 
 
 ------------------------------------------------------------------------------
@@ -407,7 +407,7 @@ currentProvider
 .. code-block:: javascript
 
     web3.currentProvider
-    web3.eth.currentProvider
+    web3.pi.currentProvider
     web3.shh.currentProvider
     ...
 
@@ -427,7 +427,7 @@ Example
 .. code-block:: javascript
 
     if (!web3.currentProvider) {
-        web3.setProvider('http://localhost:8545');
+        web3.setProvider('http://localhost:6969/pchain');
     }
 
 ------------------------------------------------------------------------------
@@ -438,7 +438,7 @@ BatchRequest
 .. code-block:: javascript
 
     new web3.BatchRequest()
-    new web3.eth.BatchRequest()
+    new web3.pi.BatchRequest()
     new web3.shh.BatchRequest()
     ...
 
@@ -465,9 +465,9 @@ Example
 
 .. code-block:: javascript
 
-    const contract = new web3.eth.Contract(abi, address);
+    const contract = new web3.pi.Contract(abi, address);
 
     const batch = new web3.BatchRequest();
-    batch.add(web3.eth.getBalance.request('0x0000000000000000000000000000000000000000', 'latest'));
+    batch.add(web3.pi.getBalance.request('0x0000000000000000000000000000000000000000', 'latest'));
     batch.add(contract.methods.balance(address).call.request({from: '0x0000000000000000000000000000000000000000'}));
     batch.execute().then(...);

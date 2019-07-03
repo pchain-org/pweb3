@@ -1,9 +1,9 @@
-.. _eth-net:
+.. _pi-net:
 
 .. include:: include_announcement.rst
 
 ============
-web3.eth.net
+web3.pi.net
 ============
 
 
@@ -23,11 +23,11 @@ getNetworkType
 
 .. code-block:: javascript
 
-    web3.eth.net.getNetworkType([callback])
+    web3.pi.net.getNetworkType([callback])
 
 Guesses the chain the node is connected by comparing the genesis hashes.
 
-.. note:: It's recommended to use the :ref:`web3.eth.getChainId <eth-chainId>` method to detect the currently connected chain.
+.. note:: It's recommended to use the :ref:`web3.pi.getChainId <pi-chainId>` method to detect the currently connected chain.
 
 -------
 Returns
@@ -48,7 +48,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.net.getNetworkType().then(console.log);
+    web3.pi.net.getNetworkType().then(console.log);
     > "main"
 
 

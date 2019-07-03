@@ -5,7 +5,7 @@
 Web3
 ====
 
-    The Web3 class is a wrapper to house all Ethereum related modules.
+    The Web3 class is a wrapper to house all Pchain related modules.
 
 
 Initiating of Web3
@@ -26,12 +26,12 @@ Example
 
 .. code-block:: javascript
 
-    import Web3 from 'web3';
+    import Web3 from 'pweb3';
 
-    // "Web3.givenProvider" will be set in a Ethereum supported browser.
+    // "Web3.givenProvider" will be set in a Pchain supported browser.
     const web3 = new Web3(Web3.givenProvider || 'ws://some.local-or-remote.node:8546', net, options);
 
-    > web3.eth
+    > web3.pi
     > web3.shh
     > web3.utils
     > web3.version
@@ -50,9 +50,9 @@ Returns
 -------
 
 ``Object``: A list of modules:
-    - ``Eth`` - ``Function``: the Eth module for interacting with the Ethereum network see :ref:`web3.eth <eth>` for more.
-    - ``Net`` - ``Function``: the Net module for interacting with network properties see :ref:`web3.eth.net <eth-net>` for more.
-    - ``Personal`` - ``Function``: the Personal module for interacting with the Ethereum accounts see :ref:`web3.eth.personal <eth-personal>` for more.
+    - ``Pi`` - ``Function``: the Pi module for interacting with the Pchain network see :ref:`web3.pi <pi>` for more.
+    - ``Net`` - ``Function``: the Net module for interacting with network properties see :ref:`web3.pi.net <pi-net>` for more.
+    - ``Personal`` - ``Function``: the Personal module for interacting with the Pchain accounts see :ref:`web3.pi.personal <pi-personal>` for more.
     - ``Shh`` - ``Function``: the Shh module for interacting with the whisper protocol see :ref:`web3.shh <shh>` for more.
 
 -------
@@ -63,7 +63,7 @@ Example
 
     Web3.modules
     > {
-        Eth(provider, net?, options?),
+        Pi(provider, net?, options?),
         Net(provider, net?, options?),
         Personal(provider, net?, options?),
         Shh(provider, net?, options?),

@@ -1,25 +1,25 @@
-.. _eth-iban:
+.. _pi-iban:
 
 .. include:: include_announcement.rst
 
 =============
-web3.eth.Iban
+web3.pi.Iban
 =============
 
-The ``web3.eth.Iban`` function lets convert Ethereum addresses from and to IBAN and BBAN.
+The ``web3.pi.Iban`` function lets convert Pchain addresses from and to IBAN and BBAN.
 
 .. code-block:: javascript
 
-    import {Iban} from 'web3-eth-iban';
+    import {Iban} from 'web3-pi-iban';
 
     const iban = new Iban('XE7338O073KYGTWWZN0F2WZ0R8PX5ZPPZS');
 
     // or using the web3 umbrella package
 
-    import Web3 from 'web3';
+    import Web3 from 'pweb3';
     const web3 = new Web3(Web3.givenProvider || 'ws://some.local-or-remote.node:8546', null, options);
 
-    // -> new web3.eth.Iban('XE7338O073KYGTWWZN0F2WZ0R8PX5ZPPZS')
+    // -> new web3.pi.Iban('XE7338O073KYGTWWZN0F2WZ0R8PX5ZPPZS')
 
 
 
@@ -36,7 +36,7 @@ This's instance of Iban
 
 ------------------------------------------------------------------------------
 
-.. _eth-iban-toaddress:
+.. _pi-iban-toaddress:
 
 toAddress
 =====================
@@ -45,9 +45,9 @@ toAddress
 
 .. code-block:: javascript
 
-    web3.eth.Iban.toAddress(ibanAddress)
+    web3.pi.Iban.toAddress(ibanAddress)
 
-Singleton: Converts a direct IBAN address into an Ethereum address.
+Singleton: Converts a direct IBAN address into an Pchain address.
 
 .. note:: This method also exists on the IBAN instance.
 
@@ -61,7 +61,7 @@ Parameters
 Returns
 -------
 
-``String`` - The Ethereum address.
+``String`` - The Pchain address.
 
 -------
 Example
@@ -69,13 +69,13 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.Iban.toAddress("XE7338O073KYGTWWZN0F2WZ0R8PX5ZPPZS");
+    web3.pi.Iban.toAddress("XE7338O073KYGTWWZN0F2WZ0R8PX5ZPPZS");
     > "0x00c5496aEe77C1bA1f0854206A26DdA82a81D6D8"
 
 
 ------------------------------------------------------------------------------
 
-.. _eth-iban-toiban:
+.. _pi-iban-toiban:
 
 toIban
 =====================
@@ -84,15 +84,15 @@ toIban
 
 .. code-block:: javascript
 
-    web3.eth.Iban.toIban(address)
+    web3.pi.Iban.toIban(address)
 
-Singleton: Converts an Ethereum address to a direct IBAN address.
+Singleton: Converts an Pchain address to a direct IBAN address.
 
 ----------
 Parameters
 ----------
 
-1. ``String``: the Ethereum address to convert.
+1. ``String``: the Pchain address to convert.
 
 -------
 Returns
@@ -106,13 +106,13 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.Iban.toIban("0x00c5496aEe77C1bA1f0854206A26DdA82a81D6D8");
+    web3.pi.Iban.toIban("0x00c5496aEe77C1bA1f0854206A26DdA82a81D6D8");
     > "XE7338O073KYGTWWZN0F2WZ0R8PX5ZPPZS"
 
 
 ------------------------------------------------------------------------------
 
-.. _eth-iban-fromaddress:
+.. _pi-iban-fromaddress:
 
     static function, return IBAN instance
 
@@ -121,15 +121,15 @@ fromAddress
 
 .. code-block:: javascript
 
-    web3.eth.Iban.fromAddress(address)
+    web3.pi.Iban.fromAddress(address)
 
-Singleton: Converts an Ethereum address to a direct IBAN instance.
+Singleton: Converts an Pchain address to a direct IBAN instance.
 
 ----------
 Parameters
 ----------
 
-1. ``String``: the Ethereum address to convert.
+1. ``String``: the Pchain address to convert.
 
 -------
 Returns
@@ -143,13 +143,13 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.Iban.fromAddress("0x00c5496aEe77C1bA1f0854206A26DdA82a81D6D8");
+    web3.pi.Iban.fromAddress("0x00c5496aEe77C1bA1f0854206A26DdA82a81D6D8");
     > Iban {_iban: "XE7338O073KYGTWWZN0F2WZ0R8PX5ZPPZS"}
 
 
 ------------------------------------------------------------------------------
 
-.. _eth-iban-frombban:
+.. _pi-iban-frombban:
 
     static function, return IBAN instance
 
@@ -158,7 +158,7 @@ fromBban
 
 .. code-block:: javascript
 
-    web3.eth.Iban.fromBban(bbanAddress)
+    web3.pi.Iban.fromBban(bbanAddress)
 
 Singleton: Converts an BBAN address to a direct IBAN instance.
 
@@ -180,13 +180,13 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.Iban.fromBban('ETHXREGGAVOFYORK');
+    web3.pi.Iban.fromBban('ETHXREGGAVOFYORK');
     > Iban {_iban: "XE7338O073KYGTWWZN0F2WZ0R8PX5ZPPZS"}
 
 
 ------------------------------------------------------------------------------
 
-.. _eth-iban-createindirect:
+.. _pi-iban-createindirect:
 
     static function, return IBAN instance
 
@@ -195,7 +195,7 @@ createIndirect
 
 .. code-block:: javascript
 
-    web3.eth.Iban.createIndirect(options)
+    web3.pi.Iban.createIndirect(options)
 
 Singleton: Creates an indirect IBAN address from a institution and identifier.
 
@@ -219,7 +219,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.Iban.createIndirect({
+    web3.pi.Iban.createIndirect({
         institution: "XREG",
         identifier: "GAVOFYORK"
     });
@@ -228,7 +228,7 @@ Example
 
 ------------------------------------------------------------------------------
 
-.. _eth-iban-isvalid:
+.. _pi-iban-isvalid:
 
     static function, return boolean
 
@@ -237,7 +237,7 @@ isValid
 
 .. code-block:: javascript
 
-    web3.eth.Iban.isValid(ibanAddress)
+    web3.pi.Iban.isValid(ibanAddress)
 
 Singleton: Checks if an IBAN address is valid.
 
@@ -261,10 +261,10 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.Iban.isValid("XE81ETHXREGGAVOFYORK");
+    web3.pi.Iban.isValid("XE81ETHXREGGAVOFYORK");
     > true
 
-    web3.eth.Iban.isValid("XE82ETHXREGGAVOFYORK");
+    web3.pi.Iban.isValid("XE82ETHXREGGAVOFYORK");
     > false // because the checksum is incorrect
 
 
@@ -277,7 +277,7 @@ prototype.isValid
 
 .. code-block:: javascript
 
-    web3.eth.Iban.prototype.isValid()
+    web3.pi.Iban.prototype.isValid()
 
 Singleton: Checks if an IBAN address is valid.
 
@@ -301,7 +301,7 @@ Example
 
 .. code-block:: javascript
 
-    const iban = new web3.eth.Iban("XE81ETHXREGGAVOFYORK");
+    const iban = new web3.pi.Iban("XE81ETHXREGGAVOFYORK");
     iban.isValid();
     > true
 
@@ -315,7 +315,7 @@ prototype.isDirect
 
 .. code-block:: javascript
 
-    web3.eth.Iban.prototype.isDirect()
+    web3.pi.Iban.prototype.isDirect()
 
 Checks if the IBAN instance is direct.
 
@@ -331,7 +331,7 @@ Example
 
 .. code-block:: javascript
 
-    const iban = new web3.eth.Iban("XE81ETHXREGGAVOFYORK");
+    const iban = new web3.pi.Iban("XE81ETHXREGGAVOFYORK");
     iban.isDirect();
     > false
 
@@ -344,7 +344,7 @@ prototype.isIndirect
 
 .. code-block:: javascript
 
-    web3.eth.Iban.prototype.isIndirect()
+    web3.pi.Iban.prototype.isIndirect()
 
 Checks if the IBAN instance is indirect.
 
@@ -360,7 +360,7 @@ Example
 
 .. code-block:: javascript
 
-    const iban = new web3.eth.Iban("XE81ETHXREGGAVOFYORK");
+    const iban = new web3.pi.Iban("XE81ETHXREGGAVOFYORK");
     iban.isIndirect();
     > true
 
@@ -373,7 +373,7 @@ prototype.checksum
 
 .. code-block:: javascript
 
-    web3.eth.Iban.prototype.checksum()
+    web3.pi.Iban.prototype.checksum()
 
 Returns the checksum of the IBAN instance.
 
@@ -389,7 +389,7 @@ Example
 
 .. code-block:: javascript
 
-    const iban = new web3.eth.Iban("XE81ETHXREGGAVOFYORK");
+    const iban = new web3.pi.Iban("XE81ETHXREGGAVOFYORK");
     iban.checksum();
     > "81"
 
@@ -404,7 +404,7 @@ prototype.institution
 
 .. code-block:: javascript
 
-    web3.eth.Iban.prototype.institution()
+    web3.pi.Iban.prototype.institution()
 
 Returns the institution of the IBAN instance.
 
@@ -420,7 +420,7 @@ Example
 
 .. code-block:: javascript
 
-    const iban = new web3.eth.Iban("XE81ETHXREGGAVOFYORK");
+    const iban = new web3.pi.Iban("XE81ETHXREGGAVOFYORK");
     iban.institution();
     > 'XREG'
 
@@ -434,7 +434,7 @@ prototype.client
 
 .. code-block:: javascript
 
-    web3.eth.Iban.prototype.client()
+    web3.pi.Iban.prototype.client()
 
 Returns the client of the IBAN instance.
 
@@ -450,7 +450,7 @@ Example
 
 .. code-block:: javascript
 
-    const iban = new web3.eth.Iban("XE81ETHXREGGAVOFYORK");
+    const iban = new web3.pi.Iban("XE81ETHXREGGAVOFYORK");
     iban.client();
     > 'GAVOFYORK'
 
@@ -463,15 +463,15 @@ prototype.toAddress
 
 .. code-block:: javascript
 
-    web3.eth.Iban.prototype.toString()
+    web3.pi.Iban.prototype.toString()
 
-Returns the Ethereum address of the IBAN instance.
+Returns the Pchain address of the IBAN instance.
 
 -------
 Returns
 -------
 
-``String``: The Ethereum address of the IBAN
+``String``: The Pchain address of the IBAN
 
 -------
 Example
@@ -479,7 +479,7 @@ Example
 
 .. code-block:: javascript
 
-    const iban = new web3.eth.Iban('XE7338O073KYGTWWZN0F2WZ0R8PX5ZPPZS');
+    const iban = new web3.pi.Iban('XE7338O073KYGTWWZN0F2WZ0R8PX5ZPPZS');
     iban.toAddress();
     > '0x00c5496aEe77C1bA1f0854206A26DdA82a81D6D8'
 
@@ -493,7 +493,7 @@ prototype.toString
 
 .. code-block:: javascript
 
-    web3.eth.Iban.prototype.toString()
+    web3.pi.Iban.prototype.toString()
 
 Returns the IBAN address of the IBAN instance.
 
@@ -509,7 +509,7 @@ Example
 
 .. code-block:: javascript
 
-    const iban = new web3.eth.Iban('XE7338O073KYGTWWZN0F2WZ0R8PX5ZPPZS');
+    const iban = new web3.pi.Iban('XE7338O073KYGTWWZN0F2WZ0R8PX5ZPPZS');
     iban.toString();
     > 'XE7338O073KYGTWWZN0F2WZ0R8PX5ZPPZS'
 

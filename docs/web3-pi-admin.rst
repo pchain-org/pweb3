@@ -1,4 +1,4 @@
-.. _eth-admin:
+.. _pi-admin:
 
 .. include:: include_announcement.rst
 
@@ -7,16 +7,16 @@ Admin Module
 ============
 
 
-The ``web3-eth-admin`` package allows you to interact with the Ethereum node's admin management.
+The ``web3-pi-admin`` package allows you to interact with the Pchain node's admin management.
 
 
 .. code-block:: javascript
 
-    import Web3 from 'web3';
-    import {Admin} from 'web3-eth-admin';
+    import Web3 from 'pweb3';
+    import {Admin} from 'web3-pi-admin';
 
-    // "Web3.givenProvider" will be set if in an Ethereum supported browser.
-    const admin = new Admin(Web3.givenProvider || 'ws://some.local-or-remote.node:8546', null, options);
+    // "Web3.givenProvider" will be set if in an Pchain supported browser.
+    const admin = new Admin(Web3.givenProvider || 'ws://some.local-or-remote.node:6970/pchain', null, options);
 
 
 ------------------------------------------------------------------------------
@@ -101,7 +101,7 @@ Example
 
     admin.getDataDirectory()
     .then(console.log);
-    > "/home/ubuntu/.ethereum"
+    > "/home/ubuntu/.pchain"
 
 
 ------------------------------------------------------------------------------
@@ -141,7 +141,7 @@ Returns
     - ``difficulty`` - ``number``:  Difficulty level applied during the nonce discovering of this block.
     - ``genesis`` - ``string``: Very first block hash.
     - ``head`` - ``string``: Current block hash.
-    - ``network`` - ``number``: currently used Ethereum networks ids.
+    - ``network`` - ``number``: currently used Pchain networks ids.
 
 
 -------
@@ -308,7 +308,7 @@ Parameters
 ----------
 
 1. ``host`` - ``String`` - (optional) The network interface to open the listener socket on (defaults to "localhost").
-2. ``port`` - ``number`` - (optional) The network port to open the listener socket on (defaults to 8545).
+2. ``port`` - ``number`` - (optional) The network port to open the listener socket on (defaults to 6969).
 3. ``cors`` - ``string`` - (optional) Cross-origin resource sharing header to use (defaults to "").
 4. ``apis`` - ``string`` -  (optional) API modules to offer over this interface (defaults to "eth,net,web3").
 5. ``Function`` - (optional) Optional callback, returns an error object as first parameter and the result as second.
@@ -327,7 +327,7 @@ Example
 
 .. code-block:: javascript
 
-    admin.startRPC("127.0.0.1", 8545)
+    admin.startRPC("127.0.0.1", 6969)
     .then(console.log('RPC Started!'));
     > "RPC Started!"
 
@@ -349,7 +349,7 @@ Parameters
 ----------
 
 1. ``host`` - ``String`` - (optional) The network interface to open the listener socket on (defaults to "localhost").
-2. ``port`` - ``number`` - (optional) The network port to open the listener socket on (defaults to 8545).
+2. ``port`` - ``number`` - (optional) The network port to open the listener socket on (defaults to 6969).
 3. ``cors`` - ``string`` - (optional) Cross-origin resource sharing header to use (defaults to "").
 4. ``apis`` - ``string`` -  (optional) API modules to offer over this interface (defaults to "eth,net,web3").
 5. ``Function`` - (optional) Optional callback, returns an error object as first parameter and the result as second.
@@ -368,7 +368,7 @@ Example
 
 .. code-block:: javascript
 
-    admin.startRPC("127.0.0.1", 8546)
+    admin.startRPC("127.0.0.1", 6970)
     .then(console.log('WS Started!'));
     > "WS Started!"
 

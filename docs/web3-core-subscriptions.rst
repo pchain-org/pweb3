@@ -158,7 +158,7 @@ The property ``type`` does contain the subscription type.
 Returns
 -------
 
-``String`` - ``eth_subscribe`` or ``shh_subscribe``
+``String`` - ``pi_subscribe`` or ``shh_subscribe``
 
 
 ------------------------------------------------------------------------------------------------------------------------

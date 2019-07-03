@@ -1,4 +1,4 @@
-.. _eth-miner:
+.. _pi-miner:
 
 .. include:: include_announcement.rst
 
@@ -7,14 +7,14 @@ Miner Module
 ============
 
 
-The ``web3-eth-miner`` package allows you to remote control the node's mining operation and set various mining specific settings.
+The ``web3-pi-miner`` package allows you to remote control the node's mining operation and set various mining specific settings.
 
 
 .. code-block:: javascript
 
-    import {Miner} from 'web3-eth-miner';
+    import {Miner} from 'web3-pi-miner';
 
-    // "Web3.givenProvider" will be set if in an Ethereum supported browser.
+    // "Web3.givenProvider" will be set if in an Pchain supported browser.
     const miner = new Miner(Web3.givenProvider || 'ws://some.local-or-remote.node:8546', null, options);
 
 

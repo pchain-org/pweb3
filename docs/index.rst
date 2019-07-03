@@ -2,10 +2,10 @@
 .. include:: include_announcement.rst
 
 =================================
-web3.js - Ethereum JavaScript API
+web3.js - Pchain JavaScript API
 =================================
 
-web3.js is a collection of libraries which allow you to interact with a local or remote Ethereum node,
+web3.js is a collection of libraries which allow you to interact with a local or remote Pchain node,
 using an HTTP, WebSocket or IPC connection.
 
 The following documentation will guide you through :ref:`installing and running web3.js <adding-web3>`,
@@ -29,15 +29,15 @@ Contents:
     :caption: API Reference
 
     web3
-    web3-eth
-    web3-eth-subscribe
-    web3-eth-contract
-    web3-eth-accounts
-    web3-eth-personal
-    web3-eth-ens
-    web3-eth-iban
-    web3-eth-net
-    web3-eth-abi
+    web3-pi
+    web3-pi-subscribe
+    web3-pi-contract
+    web3-pi-accounts
+    web3-pi-personal
+    web3-pi-ens
+    web3-pi-iban
+    web3-pi-net
+    web3-pi-abi
     web3-net
     web3-bzz
     web3-shh
@@ -47,8 +47,8 @@ Contents:
     web3-core
     web3-core-method
     web3-core-subscriptions
-    web3-eth-admin
-    web3-eth-debug
-    web3-eth-miner
-    web3-eth-txpool
+    web3-pi-admin
+    web3-pi-debug
+    web3-pi-miner
+    web3-pi-txpool
 

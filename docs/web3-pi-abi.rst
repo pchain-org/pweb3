@@ -1,17 +1,17 @@
-.. _eth-abi:
+.. _pi-abi:
 
 .. include:: include_announcement.rst
 
 ============
-web3.eth.abi
+web3.pi.abi
 ============
 
-The ``web3-eth-abi`` package allows you to de- and encode parameters from a ABI (Application Binary Interface).
+The ``web3-pi-abi`` package allows you to de- and encode parameters from a ABI (Application Binary Interface).
 This will be used for calling functions of a deployed smart-contract.
 
 .. code-block:: javascript
 
-    import {AbiCoder} from 'web3-eth-abi';
+    import {AbiCoder} from 'web3-pi-abi';
 
     const abiCoder = new AbiCoder();
 
@@ -19,10 +19,10 @@ This will be used for calling functions of a deployed smart-contract.
     // or using the web3 umbrella package
 
 
-    import Web3 from 'web3';
+    import Web3 from 'pweb3';
 
     const web3 = new Web3(Web3.givenProvider || 'ws://some.local-or-remote.node:8546', null, options);
-    // -> web3.eth.abi
+    // -> web3.pi.abi
 
 
 
@@ -35,7 +35,7 @@ encodeFunctionSignature
 
 .. code-block:: javascript
 
-    web3.eth.abi.encodeFunctionSignature(functionName);
+    web3.pi.abi.encodeFunctionSignature(functionName);
 
 Encodes the function name to its ABI signature, which are the first 4 bytes of the sha3 hash of the function name including types.
 
@@ -59,7 +59,7 @@ Example
 .. code-block:: javascript
 
     // From a JSON interface object
-    web3.eth.abi.encodeFunctionSignature({
+    web3.pi.abi.encodeFunctionSignature({
         name: 'myMethod',
         type: 'function',
         inputs: [{
@@ -73,7 +73,7 @@ Example
     > 0x24ee0097
 
     // Or string
-    web3.eth.abi.encodeFunctionSignature('myMethod(uint256,string)')
+    web3.pi.abi.encodeFunctionSignature('myMethod(uint256,string)')
     > '0x24ee0097'
 
 
@@ -84,7 +84,7 @@ encodeEventSignature
 
 .. code-block:: javascript
 
-    web3.eth.abi.encodeEventSignature(eventName);
+    web3.pi.abi.encodeEventSignature(eventName);
 
 Encodes the event name to its ABI signature, which are the sha3 hash of the event name including input types.
 
@@ -107,11 +107,11 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.abi.encodeEventSignature('myEvent(uint256,bytes32)')
+    web3.pi.abi.encodeEventSignature('myEvent(uint256,bytes32)')
     > 0xf2eeb729e636a8cb783be044acf6b7b1e2c5863735b60d6daae84c366ee87d97
 
     // or from a json interface object
-    web3.eth.abi.encodeEventSignature({
+    web3.pi.abi.encodeEventSignature({
         name: 'myEvent',
         type: 'event',
         inputs: [{
@@ -132,7 +132,7 @@ encodeParameter
 
 .. code-block:: javascript
 
-    web3.eth.abi.encodeParameter(type, parameter);
+    web3.pi.abi.encodeParameter(type, parameter);
 
 Encodes a parameter based on its type to its ABI representation.
 
@@ -155,19 +155,19 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.abi.encodeParameter('uint256', '2345675643');
+    web3.pi.abi.encodeParameter('uint256', '2345675643');
     > "0x000000000000000000000000000000000000000000000000000000008bd02b7b"
 
-    web3.eth.abi.encodeParameter('uint256', '2345675643');
+    web3.pi.abi.encodeParameter('uint256', '2345675643');
     > "0x000000000000000000000000000000000000000000000000000000008bd02b7b"
 
-    web3.eth.abi.encodeParameter('bytes32', '0xdf3234');
+    web3.pi.abi.encodeParameter('bytes32', '0xdf3234');
     > "0xdf32340000000000000000000000000000000000000000000000000000000000"
 
-    web3.eth.abi.encodeParameter('bytes', '0xdf3234');
+    web3.pi.abi.encodeParameter('bytes', '0xdf3234');
     > "0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000003df32340000000000000000000000000000000000000000000000000000000000"
 
-    web3.eth.abi.encodeParameter('bytes32[]', ['0xdf3234', '0xfdfd']);
+    web3.pi.abi.encodeParameter('bytes32[]', ['0xdf3234', '0xfdfd']);
     > "00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000002df32340000000000000000000000000000000000000000000000000000000000fdfd000000000000000000000000000000000000000000000000000000000000"
 
 
@@ -179,7 +179,7 @@ encodeParameters
 
 .. code-block:: javascript
 
-    web3.eth.abi.encodeParameters(typesArray, parameters);
+    web3.pi.abi.encodeParameters(typesArray, parameters);
 
 Encodes a function parameters based on its :ref:`JSON interface <glossary-json-interface>` object.
 
@@ -202,10 +202,10 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.abi.encodeParameters(['uint256','string'], ['2345675643', 'Hello!%']);
+    web3.pi.abi.encodeParameters(['uint256','string'], ['2345675643', 'Hello!%']);
     > "0x000000000000000000000000000000000000000000000000000000008bd02b7b0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000748656c6c6f212500000000000000000000000000000000000000000000000000"
 
-    web3.eth.abi.encodeParameters(['uint8[]','bytes32'], [['34','434'], '0x324567fff']);
+    web3.pi.abi.encodeParameters(['uint8[]','bytes32'], [['34','434'], '0x324567fff']);
     > "0x0"
 
 
@@ -216,7 +216,7 @@ encodeFunctionCall
 
 .. code-block:: javascript
 
-    web3.eth.abi.encodeFunctionCall(jsonInterface, parameters);
+    web3.pi.abi.encodeFunctionCall(jsonInterface, parameters);
 
 Encodes a function call using its :ref:`JSON interface <glossary-json-interface>` object and given parameters.
 
@@ -239,7 +239,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.abi.encodeFunctionCall({
+    web3.pi.abi.encodeFunctionCall({
         name: 'myMethod',
         type: 'function',
         inputs: [{
@@ -259,7 +259,7 @@ decodeParameter
 
 .. code-block:: javascript
 
-    web3.eth.abi.decodeParameter(type, hexString);
+    web3.pi.abi.decodeParameter(type, hexString);
 
 Decodes an ABI encoded parameter to its JavaScript type.
 
@@ -282,13 +282,13 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.abi.decodeParameter('uint256', '0x0000000000000000000000000000000000000000000000000000000000000010');
+    web3.pi.abi.decodeParameter('uint256', '0x0000000000000000000000000000000000000000000000000000000000000010');
     > "16"
 
-    web3.eth.abi.decodeParameter('string', '0x0000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000848656c6c6f212521000000000000000000000000000000000000000000000000');
+    web3.pi.abi.decodeParameter('string', '0x0000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000848656c6c6f212521000000000000000000000000000000000000000000000000');
     > "Hello!%!"
 
-    web3.eth.abi.decodeParameter('string', '0x0000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000848656c6c6f212521000000000000000000000000000000000000000000000000');
+    web3.pi.abi.decodeParameter('string', '0x0000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000848656c6c6f212521000000000000000000000000000000000000000000000000');
     > "Hello!%!"
 
 
@@ -299,7 +299,7 @@ decodeParameters
 
 .. code-block:: javascript
 
-    web3.eth.abi.decodeParameters(typesArray, hexString);
+    web3.pi.abi.decodeParameters(typesArray, hexString);
 
 Decodes ABI encoded parameters to its JavaScript types.
 
@@ -322,10 +322,10 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.abi.decodeParameters(['string', 'uint256'], '0x000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000ea000000000000000000000000000000000000000000000000000000000000000848656c6c6f212521000000000000000000000000000000000000000000000000');
+    web3.pi.abi.decodeParameters(['string', 'uint256'], '0x000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000ea000000000000000000000000000000000000000000000000000000000000000848656c6c6f212521000000000000000000000000000000000000000000000000');
     > Result { '0': 'Hello!%!', '1': '234' }
 
-    web3.eth.abi.decodeParameters([{
+    web3.pi.abi.decodeParameters([{
         type: 'string',
         name: 'myString'
     },{
@@ -348,7 +348,7 @@ decodeLog
 
 .. code-block:: javascript
 
-    web3.eth.abi.decodeLog(inputs, hexString, topics);
+    web3.pi.abi.decodeLog(inputs, hexString, topics);
 
 Decodes ABI encoded log data and indexed topic data.
 
@@ -373,7 +373,7 @@ Example
 .. code-block:: javascript
 
 
-    web3.eth.abi.decodeLog([{
+    web3.pi.abi.decodeLog([{
         type: 'string',
         name: 'myString'
     },{

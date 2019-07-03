@@ -1,12 +1,12 @@
-.. _eth-subscribe:
+.. _pi-subscribe:
 
 .. include:: include_announcement.rst
 
 ==================
-web3.eth.subscribe
+web3.pi.subscribe
 ==================
 
-The ``web3.eth.subscribe`` function lets you subscribe to specific events in the blockchain.
+The ``web3.pi.subscribe`` function lets you subscribe to specific events in the blockchain.
 
 
 
@@ -15,7 +15,7 @@ subscribe
 
 .. code-block:: javascript
 
-    web3.eth.subscribe(type [, options] [, callback]);
+    web3.pi.subscribe(type [, options] [, callback]);
 
 ----------
 Parameters
@@ -25,7 +25,7 @@ Parameters
 2. ``Mixed`` - (optional) Optional additional parameters, depending on the subscription type.
 3. ``Function`` - (optional) Optional callback, returns an error object as first parameter and the result as second. Will be called for each incoming subscription, and the subscription itself as 3 parameter.
 
-.. _eth-subscription-return:
+.. _pi-subscription-return:
 
 -------
 Returns
@@ -55,7 +55,7 @@ Example
 
 .. code-block:: javascript
 
-    const subscription = web3.eth.subscribe('logs', {
+    const subscription = web3.pi.subscribe('logs', {
         address: '0x123456..',
         topics: ['0x12345...']
     }, function(error, result){
@@ -78,7 +78,7 @@ clearSubscriptions
 
 .. code-block:: javascript
 
-    web3.eth.clearSubscriptions()
+    web3.pi.clearSubscriptions()
 
 Resets subscriptions.
 
@@ -96,11 +96,11 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.subscribe('logs', {} ,function(){ ... });
+    web3.pi.subscribe('logs', {} ,function(){ ... });
 
     ...
 
-    web3.eth.clearSubscriptions();
+    web3.pi.clearSubscriptions();
 
 
 ------------------------------------------------------------------------------
@@ -111,7 +111,7 @@ subscribe("pendingTransactions")
 
 .. code-block:: javascript
 
-    web3.eth.subscribe('pendingTransactions' [, callback]);
+    web3.pi.subscribe('pendingTransactions' [, callback]);
 
 Subscribes to incoming pending transactions.
 
@@ -126,7 +126,7 @@ Parameters
 Returns
 -------
 
-``EventEmitter``: An :ref:`subscription instance <eth-subscription-return>` as an event emitter with the following events:
+``EventEmitter``: An :ref:`subscription instance <pi-subscription-return>` as an event emitter with the following events:
 
 - ``"data"`` returns ``String``: Fires on each incoming pending transaction and returns the transaction hash.
 - ``"error"`` returns ``Object``: Fires when an error in the subscription occurs.
@@ -145,7 +145,7 @@ Example
 
 .. code-block:: javascript
 
-    const subscription = web3.eth.subscribe('pendingTransactions', function(error, result){
+    const subscription = web3.pi.subscribe('pendingTransactions', function(error, result){
         if (!error)
             console.log(result);
     })
@@ -168,7 +168,7 @@ subscribe("newBlockHeaders")
 
 .. code-block:: javascript
 
-    web3.eth.subscribe('newBlockHeaders' [, callback]);
+    web3.pi.subscribe('newBlockHeaders' [, callback]);
 
 Subscribes to incoming block headers. This can be used as timer to check for changes on the blockchain.
 
@@ -183,7 +183,7 @@ Parameters
 Returns
 -------
 
-``EventEmitter``: An :ref:`subscription instance <eth-subscription-return>` as an event emitter with the following events:
+``EventEmitter``: An :ref:`subscription instance <pi-subscription-return>` as an event emitter with the following events:
 
 - ``"data"`` returns ``Object``: Fires on each incoming block header.
 - ``"error"`` returns ``Object``: Fires when an error in the subscription occurs.
@@ -219,7 +219,7 @@ Example
 
 .. code-block:: javascript
 
-    const subscription = web3.eth.subscribe('newBlockHeaders', function(error, result){
+    const subscription = web3.pi.subscribe('newBlockHeaders', function(error, result){
         if (!error) {
             console.log(result);
 
@@ -248,7 +248,7 @@ subscribe("syncing")
 
 .. code-block:: javascript
 
-    web3.eth.subscribe('syncing' [, callback]);
+    web3.pi.subscribe('syncing' [, callback]);
 
 Subscribe to syncing events. This will return an object when the node is syncing and when its finished syncing will return ``FALSE``.
 
@@ -263,13 +263,13 @@ Parameters
 Returns
 -------
 
-``EventEmitter``: An :ref:`subscription instance <eth-subscription-return>` as an event emitter with the following events:
+``EventEmitter``: An :ref:`subscription instance <pi-subscription-return>` as an event emitter with the following events:
 
 - ``"data"`` returns ``Object``: Fires on each incoming sync object as argument.
 - ``"changed"`` returns ``Object``: Fires when the synchronisation is started with ``true`` and when finished with ``false``.
 - ``"error"`` returns ``Object``: Fires when an error in the subscription occurs.
 
-For the structure of a returned event ``Object`` see :ref:`web3.eth.isSyncing return values <eth-issyncing-return>`.
+For the structure of a returned event ``Object`` see :ref:`web3.pi.isSyncing return values <pi-issyncing-return>`.
 
 ----------------
 Notification returns
@@ -285,7 +285,7 @@ Example
 
 .. code-block:: javascript
 
-    const subscription = web3.eth.subscribe('syncing', function(error, sync){
+    const subscription = web3.pi.subscribe('syncing', function(error, sync){
         if (!error)
             console.log(sync);
     })
@@ -314,7 +314,7 @@ subscribe("logs")
 
 .. code-block:: javascript
 
-    web3.eth.subscribe('logs', options [, callback]);
+    web3.pi.subscribe('logs', options [, callback]);
 
 Subscribes to incoming logs, filtered by the given options.
 
@@ -333,20 +333,20 @@ Parameters
 Returns
 -------
 
-``EventEmitter``: An :ref:`subscription instance <eth-subscription-return>` as an event emitter with the following events:
+``EventEmitter``: An :ref:`subscription instance <pi-subscription-return>` as an event emitter with the following events:
 
 - ``"data"`` returns ``Object``: Fires on each incoming log with the log object as argument.
 - ``"changed"`` returns ``Object``: Fires on each log which was removed from the blockchain. The log will have the additional property ``"removed: true"``.
 - ``"error"`` returns ``Object``: Fires when an error in the subscription occurs.
 
-For the structure of a returned event ``Object`` see :ref:`web3.eth.getPastEvents return values <eth-getpastlogs-return>`.
+For the structure of a returned event ``Object`` see :ref:`web3.pi.getPastEvents return values <pi-getpastlogs-return>`.
 
 ----------------
 Notification returns
 ----------------
 
 1. ``Object|Null`` - First parameter is an error object if the subscription failed.
-2. ``Object`` - The log object like in :ref:`web3.eth.getPastEvents return values <eth-getpastlogs-return>`.
+2. ``Object`` - The log object like in :ref:`web3.pi.getPastEvents return values <pi-getpastlogs-return>`.
 
 -------
 Example
@@ -355,7 +355,7 @@ Example
 
 .. code-block:: javascript
 
-    const subscription = web3.eth.subscribe('logs', {
+    const subscription = web3.pi.subscribe('logs', {
         address: '0x123456..',
         topics: ['0x12345...']
     }, (error, result) => {

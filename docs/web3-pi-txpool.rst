@@ -1,4 +1,4 @@
-.. _eth-txpool:
+.. _pi-txpool:
 
 .. include:: include_announcement.rst
 
@@ -7,15 +7,15 @@ TxPool Module
 =============
 
 
-The ``web3-eth-txpool`` package gives you access to several non-standard RPC methods to inspect the contents of the transaction pool containing all the currently pending transactions as well as the ones queued for future processing.
+The ``web3-pi-txpool`` package gives you access to several non-standard RPC methods to inspect the contents of the transaction pool containing all the currently pending transactions as well as the ones queued for future processing.
 
 
 .. code-block:: javascript
 
     import Web3 from 'web3';
-    import {TxPool} from 'web3-eth-txpool';
+    import {TxPool} from 'web3-pi-txpool';
 
-    // "Web3.givenProvider" will be set if in an Ethereum supported browser.
+    // "Web3.givenProvider" will be set if in an Pchain supported browser.
     const txPool = new TxPool(Web3.givenProvider || 'ws://some.local-or-remote.node:8546', null, options);
 
 
@@ -151,7 +151,7 @@ getInspection
 
     txPool.getInspection([, callback])
 
-The property can be queried to list a textual summary of all the transactions currently pending for inclusion in the next block(s), as well as the ones that are being scheduled for future executions. 
+The property can be queried to list a textual summary of all the transactions currently pending for inclusion in the next block(s), as well as the ones that are being scheduled for future executions.
 The RPC method used is ``txpool_inspect``.
 
 ----------

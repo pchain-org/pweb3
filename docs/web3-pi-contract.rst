@@ -1,12 +1,12 @@
-.. _eth-contract:
+.. _pi-contract:
 
 .. include:: include_announcement.rst
 
 =================
-web3.eth.Contract
+web3.pi.Contract
 =================
 
-The ``web3.eth.Contract`` object makes it easy to interact with smart contracts on the Ethereum blockchain.
+The ``web3.pi.Contract`` object makes it easy to interact with smart contracts on the Pchain blockchain.
 When you create a new contract object you give it the json interface of the respective smart contract
 and web3 will auto convert all calls into low level ABI calls over RPC for you.
 
@@ -15,12 +15,12 @@ This allows you to interact with smart contracts as if they were JavaScript obje
 To use it standalone:
 
 .. code-block:: javascript
-    import {Contract} from 'web3-eth-contract';
-    import {Accounts} from 'web3-eth-accounts;
+    import {Contract} from 'web3-pi-contract';
+    import {Accounts} from 'web3-pi-accounts;
 
     const contract = new Contract(
-        'ws://localhost:8546',
-        new Accounts('ws://localhost:8546', options),
+        'ws://localhost:6970/pchain',
+        new Accounts('ws://localhost:6970/pchain', options),
         abi,
         address,
         options
@@ -34,14 +34,14 @@ To use it standalone:
 ------------------------------------------------------------------------------
 
 
-web3.eth.Contract
+web3.pi.Contract
 =================
 
 .. index:: JSON interface
 
 .. code-block:: javascript
 
-    new web3.eth.Contract(jsonInterface, address, options)
+    new web3.pi.Contract(jsonInterface, address, options)
 
 Creates a new contract instance with all its methods and events defined in its :ref:`json interface <glossary-json-interface>` object.
 
@@ -76,7 +76,7 @@ Example
 
 .. code-block:: javascript
 
-    const myContract = new web3.eth.Contract([...], '0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe', {
+    const myContract = new web3.pi.Contract([...], '0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe', {
         defaultAccount: '0x1234567890123456789012345678901234567891', // default from address
         defaultGasPrice: '20000000000' // default gas price in wei, 20 gwei in this case
     });
@@ -237,7 +237,7 @@ Example
 
 .. code-block:: javascript
 
-    const contract1 = new eth.Contract(abi, address, {gasPrice: '12345678', defaultAccount: fromAddress});
+    const contract1 = new pi.Contract(abi, address, {gasPrice: '12345678', defaultAccount: fromAddress});
 
     const contract2 = contract1.clone();
     contract2.address = address2;
@@ -478,7 +478,7 @@ Example
     }
 
     // web3.js
-    const MyContract = new web3.eth.Contract(abi, address);
+    const MyContract = new web3.pi.Contract(abi, address);
     MyContract.methods.myFunction().call()
     .then(console.log);
     > Result {
@@ -499,7 +499,7 @@ Example
     }
 
     // web3.js
-    const MyContract = new web3.eth.Contract(abi, address);
+    const MyContract = new web3.pi.Contract(abi, address);
     MyContract.methods.myFunction().call()
     .then(console.log);
     > "Hello!%"

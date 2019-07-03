@@ -21,7 +21,7 @@ Parameters
 
 1. ``provider`` - ``AbstractSocketProvider | HttpProvider | CustomProvider | String``: A Web3.js provider.
 2. ``abi`` - ``Array``: Contract ABI
-3. ``accounts`` - :ref:`Accounts <eth-accounts>`
+3. ``accounts`` - :ref:`Accounts <pi-accounts>`
 4. ``options`` - ``Web3ModuleOptions``
 
 
@@ -32,8 +32,8 @@ Example
 .. code-block:: javascript
 
     import {MyABI, options} from '../folder/file.js';
-    import {Accounts} from 'web3-eth-accounts';
-    import {Contract} from 'web3-eth-contract';
+    import {Accounts} from 'web3-pi-accounts';
+    import {Contract} from 'web3-pi-contract';
 
     export class MyContract extends Contract {
         constructor(provider) {

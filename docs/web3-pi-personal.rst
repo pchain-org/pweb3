@@ -1,30 +1,30 @@
-.. _eth-personal:
+.. _pi-personal:
 
 .. include:: include_announcement.rst
 
 =================
-web3.eth.personal
+web3.pi.personal
 =================
 
 
-The ``web3-eth-personal`` package allows you to interact with the Ethereum node's accounts.
+The ``web3-pi-personal`` package allows you to interact with the Pchain node's accounts.
 
 .. note:: Many of these functions send sensitive information, like password. Never call these functions over a unsecured Websocket or HTTP provider, as your password will be sent in plain text!
 
 
 .. code-block:: javascript
 
-    import Web3 from 'web3';
-    import {Personal} from 'web3-eth-personal';
+    import Web3 from 'pweb3';
+    import {Personal} from 'web3-pi-personal';
 
-    // "Web3.givenProvider" will be set if in an Ethereum supported browser.
+    // "Web3.givenProvider" will be set if in an Pchain supported browser.
     const personal = new Personal(Web3.givenProvider || 'ws://some.local-or-remote.node:8546', null, options);
 
 
     // or using the web3 umbrella package
     const web3 = new Web3(Web3.givenProvider || 'ws://some.local-or-remote.node:8546', null, options);
 
-    // -> web3.eth.personal
+    // -> web3.pi.personal
 
 
 ------------------------------------------------------------------------------
@@ -43,11 +43,11 @@ newAccount
 
 .. code-block:: javascript
 
-    web3.eth.personal.newAccount(password, [callback])
+    web3.pi.personal.newAccount(password, [callback])
 
 Create a new account on the node that Web3 is connected to with its provider.
 The RPC method used is ``personal_newAccount``. It differs from
-:ref:`web3.eth.accounts.create() <accounts-create>` where the key pair is
+:ref:`web3.pi.accounts.create() <accounts-create>` where the key pair is
 created only on client and it's up to the developer to manage it.
 
 .. note:: Never call this function over a unsecured Websocket or HTTP provider, as your password will be send in plain text!
@@ -70,7 +70,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.personal.newAccount('!@superpassword')
+    web3.pi.personal.newAccount('!@superpassword')
     .then(console.log);
     > '0x1234567891011121314151617181920212223456'
 
@@ -82,9 +82,9 @@ sign
 
 .. code-block:: javascript
 
-    web3.eth.personal.sign(dataToSign, address, password [, callback])
+    web3.pi.personal.sign(dataToSign, address, password [, callback])
 
-Signs data using a specific account. This data is before UTF-8 HEX decoded and enveloped as follows: ``"\x19Ethereum Signed Message:\n" + message.length + message``.
+Signs data using a specific account. This data is before UTF-8 HEX decoded and enveloped as follows: ``"\x19Pchain Signed Message:\n" + message.length + message``.
 
 
 
@@ -116,12 +116,12 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.personal.sign("Hello world", "0x11f4d0A3c12e86B4b5F39B213F7E19D048276DAe", "test password!")
+    web3.pi.personal.sign("Hello world", "0x11f4d0A3c12e86B4b5F39B213F7E19D048276DAe", "test password!")
     .then(console.log);
     > "0x30755ed65396facf86c53e6217c52b4daebe72aa4941d89635409de4c9c7f9466d4e9aaec7977f05e923889b33c0d0dd27d7226b6e6f56ce737465c5cfd04be400"
 
     // the below is the same
-    web3.eth.personal.sign(web3.utils.utf8ToHex("Hello world"), "0x11f4d0A3c12e86B4b5F39B213F7E19D048276DAe", "test password!")
+    web3.pi.personal.sign(web3.utils.utf8ToHex("Hello world"), "0x11f4d0A3c12e86B4b5F39B213F7E19D048276DAe", "test password!")
     .then(console.log);
     > "0x30755ed65396facf86c53e6217c52b4daebe72aa4941d89635409de4c9c7f9466d4e9aaec7977f05e923889b33c0d0dd27d7226b6e6f56ce737465c5cfd04be400"
 
@@ -134,7 +134,7 @@ ecRecover
 
 .. code-block:: javascript
 
-    web3.eth.personal.ecRecover(dataThatWasSigned, signature [, callback])
+    web3.pi.personal.ecRecover(dataThatWasSigned, signature [, callback])
 
 Recovers the account that signed the data.
 
@@ -163,7 +163,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.personal.ecRecover("Hello world", "0x30755ed65396facf86c53e6217c52b4daebe72aa4941d89635409de4c9c7f9466d4e9aaec7977f05e923889b33c0d0dd27d7226b6e6f56ce737465c5cfd04be400").then(console.log);
+    web3.pi.personal.ecRecover("Hello world", "0x30755ed65396facf86c53e6217c52b4daebe72aa4941d89635409de4c9c7f9466d4e9aaec7977f05e923889b33c0d0dd27d7226b6e6f56ce737465c5cfd04be400").then(console.log);
     > "0x11f4d0A3c12e86B4b5F39B213F7E19D048276DAe"
 
 ------------------------------------------------------------------------------
@@ -174,7 +174,7 @@ signTransaction
 
 .. code-block:: javascript
 
-    web3.eth.personal.signTransaction(transaction, password [, callback])
+    web3.pi.personal.signTransaction(transaction, password [, callback])
 
 Signs a transaction. This account needs to be unlocked.
 
@@ -185,7 +185,7 @@ Parameters
 ----------
 
 
-1. ``Object`` - The transaction data to sign :ref:`web3.eth.sendTransaction() <eth-sendtransaction>` for more.
+1. ``Object`` - The transaction data to sign :ref:`web3.pi.sendTransaction() <pi-sendtransaction>` for more.
 2. ``String`` - The password of the ``from`` account, to sign the transaction with.
 3. ``Function`` - (optional) Optional callback, returns an error object as first parameter and the result as second.
 
@@ -195,7 +195,7 @@ Returns
 -------
 
 
-``Promise<Object>`` - The RLP encoded transaction. The ``raw`` property can be used to send the transaction using :ref:`web3.eth.sendSignedTransaction <eth-sendsignedtransaction>`.
+``Promise<Object>`` - The RLP encoded transaction. The ``raw`` property can be used to send the transaction using :ref:`web3.pi.sendSignedTransaction <pi-sendsignedtransaction>`.
 
 
 -------
@@ -205,7 +205,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.signTransaction({
+    web3.pi.signTransaction({
         from: "0xEB014f8c8B418Db6b45774c326A0E64C78914dC0",
         gasPrice: "20000000000",
         gas: "21000",
@@ -237,7 +237,7 @@ sendTransaction
 
 .. code-block:: javascript
 
-    web3.eth.personal.sendTransaction(transactionOptions, password [, callback])
+    web3.pi.personal.sendTransaction(transactionOptions, password [, callback])
 
 This method sends a transaction over the management API.
 
@@ -268,7 +268,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.sendTransaction({
+    web3.pi.sendTransaction({
         from: "0xEB014f8c8B418Db6b45774c326A0E64C78914dC0",
         gasPrice: "20000000000",
         gas: "21000",
@@ -286,7 +286,7 @@ unlockAccount
 
 .. code-block:: javascript
 
-    web3.eth.personal.unlockAccount(address, password, unlockDuraction [, callback])
+    web3.pi.personal.unlockAccount(address, password, unlockDuraction [, callback])
 
 Unlocks the given account.
 
@@ -315,7 +315,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.personal.unlockAccount("0x11f4d0A3c12e86B4b5F39B213F7E19D048276DAe", "test password!", 600)
+    web3.pi.personal.unlockAccount("0x11f4d0A3c12e86B4b5F39B213F7E19D048276DAe", "test password!", 600)
     .then(console.log('Account unlocked!'));
     > "Account unlocked!"
 
@@ -327,7 +327,7 @@ lockAccount
 
 .. code-block:: javascript
 
-    web3.eth.personal.lockAccount(address [, callback])
+    web3.pi.personal.lockAccount(address [, callback])
 
 Locks the given account.
 
@@ -357,7 +357,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.personal.lockAccount("0x11f4d0A3c12e86B4b5F39B213F7E19D048276DAe")
+    web3.pi.personal.lockAccount("0x11f4d0A3c12e86B4b5F39B213F7E19D048276DAe")
     .then(console.log('Account locked!'));
     > "Account locked!"
 
@@ -370,15 +370,15 @@ getAccounts
 
 .. code-block:: javascript
 
-    web3.eth.personal.getAccounts([callback])
+    web3.pi.personal.getAccounts([callback])
 
 Returns a list of accounts the node controls by using the provider and calling
-the RPC method ``personal_listAccounts``. Using :ref:`web3.eth.accounts.create() <accounts-create>`
+the RPC method ``personal_listAccounts``. Using :ref:`web3.pi.accounts.create() <accounts-create>`
 will not add accounts into this list. For that use
-:ref:`web3.eth.personal.newAccount() <personal-newaccount>`.
+:ref:`web3.pi.personal.newAccount() <personal-newaccount>`.
 
-The results are the same as :ref:`web3.eth.getAccounts() <eth-getaccounts>` except that calls
-the RPC method ``eth_accounts``.
+The results are the same as :ref:`web3.pi.getAccounts() <pi-getaccounts>` except that calls
+the RPC method ``pi_accounts``.
 
 -------
 Returns
@@ -394,7 +394,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.personal.getAccounts()
+    web3.pi.personal.getAccounts()
     .then(console.log);
     > ["0x11f4d0A3c12e86B4b5F39B213F7E19D048276DAe", "0xDCc6960376d6C6dEa93647383FfB245CfCed97Cf"]
 
@@ -407,7 +407,7 @@ importRawKey
 
 .. code-block:: javascript
 
-    web3.eth.personal.importRawKey(privateKey, password)
+    web3.pi.personal.importRawKey(privateKey, password)
 
 Imports the given private key into the key store, encrypting it with the passphrase.
 
@@ -438,7 +438,7 @@ Example
 
 .. code-block:: javascript
 
-    web3.eth.personal.importRawKey("cd3376bb711cb332ee3fb2ca04c6a8b9f70c316fcdf7a1f44ef4c7999483295e", "password1234")
+    web3.pi.personal.importRawKey("cd3376bb711cb332ee3fb2ca04c6a8b9f70c316fcdf7a1f44ef4c7999483295e", "password1234")
     .then(console.log);
     > "0x8f337bf484b2fc75e4b0436645dcc226ee2ac531"
 
