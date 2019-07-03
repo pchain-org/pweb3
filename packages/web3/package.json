@@ -65,10 +65,10 @@
         "web3-net": "1.0.0-beta.55",
         "web3-providers": "1.0.0-beta.55",
         "web3-shh": "1.0.0-beta.55",
-        "web3-tdm": "1.0.0-beta.55",
-        "web3-chain": "1.0.0-beta.55",
-        "web3-del": "1.0.0-beta.55",
-        "web3-pi": "1.0.0-beta.55",
+        "pweb3-tdm": "1.0.0-beta.55",
+        "pweb3-chain": "1.0.0-beta.55",
+        "pweb3-del": "1.0.0-beta.55",
+        "pweb3-pi": "1.0.0-beta.55",
         "web3-utils": "1.0.0-beta.55"
     },
     "devDependencies": {

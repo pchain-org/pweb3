@@ -17,7 +17,7 @@
  * @date 2018
  */
 
-import Web3 from 'web3';
+import Web3 from 'pweb3';
 
 // $ExpectType Modules
 Web3.modules;

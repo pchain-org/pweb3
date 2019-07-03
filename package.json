@@ -4,7 +4,7 @@
     "version": "1.0.0",
     "description": "Pchain JavaScript API wrapper repository",
     "license": "LGPL-3.0",
-    "main": "./packages/web3/src/index.js",
+    "main": "./packages/pweb3/src/Web3.js",
     "directories": {
         "doc": "./doc"
     },
