@@ -1064,7 +1064,7 @@ Example
 
 .. code-block:: javascript
 
-    const Tx = require('ethereumjs-tx');
+    const Tx = require('pchainjs-tx');
     const privateKey = new Buffer('e331b6d69882b4cb4ea581d88e0b604039a3de5967688d3dcffdd2270c0fd109', 'hex')
 
     const rawTx = {
@@ -1073,7 +1073,9 @@ Example
       gasLimit: '0x2710',
       to: '0x0000000000000000000000000000000000000000',
       value: '0x00',
-      data: '0x7f7465737432000000000000000000000000000000000000000000000000000000600057'
+      data: '0x7f7465737432000000000000000000000000000000000000000000000000000000600057',
+      // mainChain :"pchain",childChain 1 :"child_0"
+      chainId: "pchain"
     }
 
     const tx = new Tx(rawTx);
