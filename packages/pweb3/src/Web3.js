@@ -34,6 +34,8 @@ import {Tdm} from 'pweb3-tdm';
 import {Chain} from 'pweb3-chain';
 import {Del} from 'pweb3-del';
 import {version} from '../package.json';
+var CryptoJS = require('crypto-js');
+var sha3 = require('crypto-js/sha3');
 
 export default class Web3 extends AbstractWeb3Module {
     /**
@@ -259,6 +261,48 @@ export default class Web3 extends AbstractWeb3Module {
      */
     static get givenProvider() {
         return ProviderDetector.detect();
+    }
+
+    /**
+     * Gets the getVoteHash property
+     *
+     * @property getVoteHash
+     *
+     * @returns {String|String|String|String} value
+     */
+    getVoteHash(from, pubKey, amount, salt) {
+        if (pubKey.substr(0, 2) === '0x') pubKey = pubKey.substr(2);
+
+        if ((typeof amount) == 'string' && amount.substr(0, 2) === '0x'){
+            amount = amount.substr(2);
+        } else {
+            amount = amount.toString('16');
+        }
+
+        amount = (amount.length%2 == 0) ? amount:('0'+amount);
+
+        var saltCode = '';
+
+        for(var i=0;i<salt.length;i++){
+            saltCode += salt[i].charCodeAt().toString('16');
+        }
+
+        var concatString = from + pubKey + amount + saltCode;
+
+        return '16' + sha3(concatString.toLowerCase(), {encoding: 'hex'});
+    }
+
+    sha3(value, options) {
+        if (options && options.encoding === 'hex') {
+            if (value.length > 2 && value.substr(0, 2) === '0x') {
+                value = value.substr(2);
+            }
+            value = CryptoJS.enc.Hex.parse(value);
+        }
+
+        return sha3(value, {
+            outputLength: 256
+        }).toString();
     }
 
     /**
