@@ -42,7 +42,7 @@ For  pweb3.js, check ``Web3.givenProvider``. If this property is ``null`` you sh
     const web3 = new Web3('/Users/myuser/Library/Pchain/pchain.ipc', net, {}); // mac os path
     // or
     const web3 = new Web3(new Web3.providers.IpcProvider('/Users/myuser/Library/Pchain/pchain.ipc', net, {})); // mac os path
-    // on windows the path is: '\\\\.\\pipe\\geth.ipc'
+    // on windows the path is: '\\\\.\\pipe\\pchain.ipc'
     // on linux the path is: '/users/myuser/.pchain/pchain.ipc'
 
 

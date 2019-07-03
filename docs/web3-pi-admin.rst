@@ -157,7 +157,7 @@ Example
         id: "44826a5d6a55f88a18298bca4773fca5749cdc3a5c9f308aa7d810e9b31123f3e7c5fba0b1d70aac5308426f47df2a128a6747040a3815cc7dd7167d03be320d",
         ip: "::",
         listenAddr: "[::]:30303",
-        name: "Geth/v1.5.0-unstable/linux/go1.6",
+        name: "pchain/v1.5.0-unstable/linux/go1.6",
         ports: {
             discovery: 30303,
             listener: 30303
@@ -221,7 +221,7 @@ Example
     > [{
             caps: ["eth/61", "eth/62", "eth/63"],
             id: "08a6b39263470c78d3e4f58e3c997cd2e7af623afce64656cfc56480babcea7a9138f3d09d7b9879344c2d2e457679e3655d4b56eaff5fd4fd7f147bdb045124",
-            name: "Geth/v1.5.0-unstable/linux/go1.5.1",
+            name: "pchain/v1.5.0-unstable/linux/go1.5.1",
             network: {
                 localAddress: "192.168.0.104:51068",
                 remoteAddress: "71.62.31.72:30303"
@@ -236,7 +236,7 @@ Example
         }, /* ... */ {
             caps: ["eth/61", "eth/62", "eth/63"],
             id: "fcad9f6d3faf89a0908a11ddae9d4be3a1039108263b06c96171eb3b0f3ba85a7095a03bb65198c35a04829032d198759edfca9b63a8b69dc47a205d94fce7cc",
-            name: "Geth/v1.3.5-506c9277/linux/go1.4.2",
+            name: "pchain/v1.3.5-506c9277/linux/go1.4.2",
             network: {
                 localAddress: "192.168.0.104:55968",
                 remoteAddress: "121.196.232.205:30303"
