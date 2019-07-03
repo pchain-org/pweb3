@@ -11,7 +11,7 @@ Specification
 
 Functions:
 
-- ``type``: ``"function"``, ``"constructor"`` (can be omitted, defaulting to ``"function"``; ``"fallback"`` also possible but not relevant in web3.js);
+- ``type``: ``"function"``, ``"constructor"`` (can be omitted, defaulting to ``"function"``; ``"fallback"`` also possible but not relevant in pweb3.js);
 - ``name``: the name of the function (only present for function types);
 - ``constant``: ``true`` if function is specified to not modify the blockchain state;
 - ``payable``: ``true`` if function accepts ether, defaults to ``false``;

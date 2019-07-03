@@ -379,7 +379,7 @@ givenProvider
     web3.shh.givenProvider
     ...
 
-When using web3.js in an Pchain compatible browser, it will set with the current native provider by that browser.
+When using pweb3.js in an Pchain compatible browser, it will set with the current native provider by that browser.
 Will return the given provider by the (browser) environment, otherwise ``null``.
 
 

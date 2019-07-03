@@ -2,13 +2,13 @@
 .. include:: include_announcement.rst
 
 =================================
-web3.js - Pchain JavaScript API
+pweb3.js - Pchain JavaScript API
 =================================
 
-web3.js is a collection of libraries which allow you to interact with a local or remote Pchain node,
+pweb3.js is a collection of libraries which allow you to interact with a local or remote Pchain node,
 using an HTTP, WebSocket or IPC connection.
 
-The following documentation will guide you through :ref:`installing and running web3.js <adding-web3>`,
+The following documentation will guide you through :ref:`installing and running pweb3.js <adding-web3>`,
 as well as providing a :ref:`API reference documentation <#id1>` with examples.
 
 Contents:

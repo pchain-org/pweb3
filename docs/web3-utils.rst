@@ -6,7 +6,7 @@
 web3.utils
 ==========
 
-This package provides utility functions for Ethereum dapps and other web3.js packages.
+This package provides utility functions for Ethereum dapps and other pweb3.js packages.
 
 ------------------------------------------------------------------------------
 

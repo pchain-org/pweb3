@@ -4,7 +4,7 @@
 Getting Started
 ===============
 
-The web3.js library is a collection of modules which contain specific functionality for the Pchain ecosystem.
+The pweb3.js library is a collection of modules which contain specific functionality for the Pchain ecosystem.
 
 - The ``web3-pi`` is for the Pchain blockchain and smart contracts
 - The ``web3-shh`` is for the whisper protocol to communicate p2p and broadcast
@@ -13,18 +13,18 @@ The web3.js library is a collection of modules which contain specific functional
 
 .. _adding-web3:
 
-Adding web3.js
+Adding pweb3.js
 ==============
 
 .. index:: npm
 
-First you need to get web3.js into your project. This can be done using the following methods:
+First you need to get pweb3.js into your project. This can be done using the following methods:
 
-- npm: ``npm install web3``
+- npm: ``npm install pweb3``
 
 After that you need to create a web3 instance and set a provider.
 A Pchain compatible browser will have a ``window.Pchain`` or ``web3.currentProvider`` available.
-For  web3.js, check ``Web3.givenProvider``. If this property is ``null`` you should connect to your own local or remote node.
+For  pweb3.js, check ``Web3.givenProvider``. If this property is ``null`` you should connect to your own local or remote node.
 
 .. code-block:: javascript
 

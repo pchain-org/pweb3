@@ -19,7 +19,7 @@ The exported class ``Contract`` is here to simply pre-inject a contract ABI.
 Parameters
 ----------
 
-1. ``provider`` - ``AbstractSocketProvider | HttpProvider | CustomProvider | String``: A Web3.js provider.
+1. ``provider`` - ``AbstractSocketProvider | HttpProvider | CustomProvider | String``: A PWeb3.js provider.
 2. ``abi`` - ``Array``: Contract ABI
 3. ``accounts`` - :ref:`Accounts <pi-accounts>`
 4. ``options`` - ``Web3ModuleOptions``

@@ -80,7 +80,7 @@ The ``AbstractMethod`` class does have the following constructor parameters:
 - ``moduleInstance`` - ``AbstractWeb3Module``
 
 The ``AbstractMethod`` class is the base JSON-RPC method class and does provide the basic methods and properties for creating a
-Web3.js compatible JSON-RPC method.
+PWeb3.js compatible JSON-RPC method.
 
 You're able to overwrite these methods:
 
