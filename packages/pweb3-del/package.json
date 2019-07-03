@@ -1,6 +1,6 @@
 {
     "name": "pweb3-del",
-    "namespace": "ethereum",
+    "namespace": "pchain",
     "version": "1.0.0-beta.55",
     "description": "Web3 module to interact with the Ethereum del properties.",
     "repository": "https://github.com/pchain-org/pweb3/tree/pweb3-1.x/packages/pweb3-del",
