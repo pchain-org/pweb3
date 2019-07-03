@@ -21,7 +21,7 @@ import {AbstractWeb3Module, Web3ModuleOptions} from 'web3-core';
 import {provider} from 'web3-providers';
 import * as net from 'net';
 
-export class Tdm extends AbstractWeb3Module {
+export class Chain extends AbstractWeb3Module {
 
     constructor(
         provider: provider,
