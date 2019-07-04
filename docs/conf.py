@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# web3.js documentation build configuration file, created by
+# pweb3.js documentation build configuration file, created by
 # sphinx-quickstart on Fri Oct 14 15:04:49 2016.
 #
 # This file is execfile()d with the current directory set to its
@@ -48,8 +48,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'web3.js'
-copyright = u'2019, Ethereum'
+project = u'pweb3.js'
+copyright = u'2019, Pchain'
 author = u'Samuel Furter, Fabian Vogelsteller, Marek Kotewicz, Jeffrey Wilcke, Marian Oancea, Gav Wood'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -133,7 +133,7 @@ html_theme = 'default'
 # The name for this set of Sphinx documents.
 # "<project> v<release> documentation" by default.
 #
-# html_title = u'web3.js v1.0.0'
+# html_title = u'pweb3.js v1.0.0'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #
@@ -233,7 +233,7 @@ html_static_path = ['_static']
 # html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'web3jsdoc'
+htmlhelp_basename = 'pweb3jsdoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -259,7 +259,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'web3js.tex', u'web3.js Documentation',
+    (master_doc, 'pweb3js.tex', u'pweb3.js Documentation',
      u'Fabian Vogelsteller, Marek Kotewicz, Jeffrey Wilcke, Marian Oancea, Gav Wood', 'manual'),
 ]
 
@@ -301,7 +301,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'web3js', u'web3.js Documentation',
+    (master_doc, 'pweb3js', u'pweb3.js Documentation',
      [author], 1)
 ]
 
@@ -316,8 +316,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'web3js', u'web3.js Documentation',
-     author, 'web3js', 'One line description of project.',
+    (master_doc, 'pweb3js', u'pweb3.js Documentation',
+     author, 'pweb3js', 'One line description of project.',
      'Miscellaneous'),
 ]
 
