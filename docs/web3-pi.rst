@@ -417,6 +417,66 @@ Example
 
 ------------------------------------------------------------------------------
 
+
+
+.. _pi-getFullBalance:
+
+getFullBalance
+=====================
+
+.. code-block:: javascript
+
+    web3.pi.getFullBalance(from,blockNumber,fullProxied [, callback])
+
+Get the balance of an address at a given block.
+
+----------
+Parameters
+----------
+
+1. ``String`` - The address to get the balance of.
+2. ``Number|String`` - QUANTITY|TAG - integer block number, or the string "latest", "earliest" or "pending".
+3. ``fullProxied`` - Boolean - If true it returns the full detail proxied object under this address.
+
+-------
+Returns
+-------
+
+balance - QUANTITY - integer of the current balance in p-wei. delegateBalance: QUANTITY - total delegate balance in p-wei to other address depositBalance: QUANTITY - deposit balance in p-wei for Validator Stake depositProxiedBalance: QUANTITY - total deposit proxied balance in p-wei for Validator Stake pendingRefundBalance: QUANTITY - total pending refund balance in p-wei which will be return to delegate at the end of Current Epoch proxiedBalance: QUANTITY - total proxied balance in p-wei delegate from other address proxied_detail: Object - detail record of each address's proxied data, including proxied balance, deposit proxied balance and pending refund balance.
+
+
+-------
+Example
+-------
+
+
+.. code-block:: javascript
+
+    var fullBalance = web3.pi.getFullBalance("0x407d73d8a49eeb85d32cf465507dd71d507100c1","latest",true);
+    console.log(fullBalance);
+    > {
+       "balance": "0x1000eadf9",
+       "delegateBalance": "0x152d02c7e14af6800000",
+       "depositBalance": "0x0",
+       "depositProxiedBalance": "0x0",
+       "pendingRefundBalance": "0x0",
+       "proxiedBalance": "0x152d02c7e14af680b000",
+       "proxied_detail": {
+           "0x1529fa43d9f7fe958662f7200739cdc3ec2666c7": {
+               "ProxiedBalance": "0xb000",
+               "DepositProxiedBalance": "0x0",
+               "PendingRefundBalance": "0x0"
+           },
+           "0xd833b6738285f4a50cf42cf1a40c4000256589d4": {
+               "ProxiedBalance": "0x152d02c7e14af6800000",
+               "DepositProxiedBalance": "0x0",
+               "PendingRefundBalance": "0x0"
+           }
+       }
+   }
+
+------------------------------------------------------------------------------
+
 .. _pi-getstorageat:
 
 getStorageAt
@@ -1074,8 +1134,8 @@ Example
       to: '0x0000000000000000000000000000000000000000',
       value: '0x00',
       data: '0x7f7465737432000000000000000000000000000000000000000000000000000000600057',
-      // mainChain :"pchain",childChain 1 :"child_0"
-      chainId: "pchain"
+      // mainChain: 'pchain',childChain 1: 'child_0'
+      chainId: 'pchain'
     }
 
     const tx = new Tx(rawTx);
