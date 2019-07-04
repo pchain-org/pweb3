@@ -1,12 +1,12 @@
 # Pchain JavaScript API
 
 This is the Pchain compatible [JavaScript API](https://github.com/pchain-org/pweb3/wiki/JavaScript-API-1.0)
-which implements the [Generic JSON RPC](https://github.com/pchain-org/pchain/wiki/JSON-RPC#chain_createchildchain) spec. It's available on npm as a node module, for Bower and component as embeddable scripts.
+which implements the [Generic JSON RPC](https://github.com/pchain-org/pchain/wiki/JSON-RPC) spec. It's available on npm as a node module, for Bower and component as embeddable scripts.
 
 
 You need to run a local Pchain node to use this library.
 
-[Documentation](https://pweb3-10.readthedocs.io/en/latest/)
+[Documentation](https://pweb3js.readthedocs.io/en/latest/)
 
 
 
@@ -99,7 +99,7 @@ npm run dev # runs rollup with a watcher
 
 
 [repo]: https://github.com/pchain-org/pweb3
-[docs]: https://pweb3-10.readthedocs.io/en/latest/
+[docs]: https://pweb3js.readthedocs.io/en/latest/
 [npm-image]: https://badge.fury.io/js/web3.png
 [npm-url]: https://npmjs.org/package/pweb3
 [travis-image]: https://travis-ci.org/ethereum/web3.js.svg

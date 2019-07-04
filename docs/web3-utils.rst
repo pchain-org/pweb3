@@ -6,7 +6,7 @@
 web3.utils
 ==========
 
-This package provides utility functions for Ethereum dapps and other pweb3.js packages.
+This package provides utility functions for Pchain dapps and other pweb3.js packages.
 
 ------------------------------------------------------------------------------
 
@@ -410,7 +410,7 @@ isAddress
 
     web3.utils.isAddress(address,  [, chainId])
 
-Checks if a given string is a valid Ethereum address.
+Checks if a given string is a valid Pchain address.
 It will also check the checksum, if the address has upper and lowercase letters.
 
 ----------
@@ -459,7 +459,7 @@ toChecksumAddress
 
     web3.utils.toChecksumAddress(address[, chainId])
 
-Will convert an upper or lowercase Ethereum address to a checksum address.
+Will convert an upper or lowercase Pchain address to a checksum address.
 
 ----------
 Parameters

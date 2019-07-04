@@ -843,7 +843,7 @@ The possible options are:
 1. ``timeout`` - ``string`` Overrides the default timeout of 5 seconds for JavaScript-based tracing calls
 
 
-JSON-RPC specification for `debug_traceTransaction <https://github.com/ethereum/wiki/wiki/JavaScript-API>`_
+JSON-RPC specification for `debug_traceTransaction <https://github.com/pchain-org/pchain/wiki/wiki/JavaScript-API>`_
 
 ----------
 Parameters
