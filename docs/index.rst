@@ -51,4 +51,5 @@ Contents:
     web3-pi-debug
     web3-pi-miner
     web3-pi-txpool
+    web3-chain
 
