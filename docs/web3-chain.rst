@@ -7,7 +7,7 @@ web3.chain
 ==========
 
 
-The ``web3-chain`` package allows you to interact with the Pchain nodes network properties.
+The ``web3-chain`` package allows you to interact with the Pchain nodes chain properties.
 
 
 createChildChain
