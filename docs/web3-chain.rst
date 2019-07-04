@@ -419,16 +419,15 @@ none
 Returns
 -------
 
-Object - The chain info object
+``Object`` - The chain info object
 
-    chain_id: String - The chain id of the chain.
-    owner: Address, 20 Bytes - The owner address of the chain.
-    current_epoch: Number - The current epoch number of the chain.
-    epoch_start_time: Time - The start time of the current epoch
-    validators: Array - Array of validator object
-    address: Address - Address of the Validator
-    voting_power: QUANTITY - Voting Power (Stack) of the Validator
-
+    ``chain_id`` - String - The chain id of the chain.
+    ``owner`` - Address, 20 Bytes - The owner address of the chain.
+    ``current_epoch`` - Number - The current epoch number of the chain.
+    ``epoch_start_time`` - Time - The start time of the current epoch
+    ``validators`` - Array - Array of validator object
+    ``address`` - Address - Address of the Validator
+    ``voting_power`` - QUANTITY - Voting Power (Stack) of the Validator
 
 -------
 Example
