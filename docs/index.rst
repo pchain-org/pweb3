@@ -39,6 +39,8 @@ Contents:
     web3-pi-net
     web3-pi-abi
     web3-chain
+    web3-tdm
+    web3-del
     web3-net
     web3-bzz
     web3-shh
