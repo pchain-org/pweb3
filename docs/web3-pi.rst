@@ -442,13 +442,17 @@ Parameters
 Returns
 -------
 
-balance - QUANTITY - integer of the current balance in p-wei. delegateBalance: QUANTITY - total delegate balance in p-wei to other address depositBalance: QUANTITY - deposit balance in p-wei for Validator Stake depositProxiedBalance: QUANTITY - total deposit proxied balance in p-wei for Validator Stake pendingRefundBalance: QUANTITY - total pending refund balance in p-wei which will be return to delegate at the end of Current Epoch proxiedBalance: QUANTITY - total proxied balance in p-wei delegate from other address proxied_detail: Object - detail record of each address's proxied data, including proxied balance, deposit proxied balance and pending refund balance.
-
+``balance`` - QUANTITY - integer of the current balance in p-wei.
+``delegateBalance`` - QUANTITY - total delegate balance in p-wei to other address
+``depositBalance`` - QUANTITY - deposit balance in p-wei for Validator Stake
+``depositProxiedBalance`` - QUANTITY - total deposit proxied balance in p-wei for Validator Stake
+``pendingRefundBalance`` - QUANTITY - total pending refund balance in p-wei which will be return to delegate at the end of Current Epoch
+``proxiedBalance`` - QUANTITY - total proxied balance in p-wei delegate from other address
+``proxied_detail`` - Object - detail record of each address's proxied data, including proxied balance, deposit proxied balance and pending refund balance.
 
 -------
 Example
 -------
-
 
 .. code-block:: javascript
 
