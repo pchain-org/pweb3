@@ -38,6 +38,7 @@ Contents:
     web3-pi-iban
     web3-pi-net
     web3-pi-abi
+    web3-chain
     web3-net
     web3-bzz
     web3-shh
@@ -51,5 +52,4 @@ Contents:
     web3-pi-debug
     web3-pi-miner
     web3-pi-txpool
-    web3-chain
 

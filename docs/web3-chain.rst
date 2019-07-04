@@ -3,7 +3,7 @@
 .. include:: include_announcement.rst
 
 ==========
-web3.*.net
+web3.chain
 ==========
 
 
