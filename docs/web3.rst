@@ -74,6 +74,47 @@ Example
 
 ------------------------------------------------------------------------------
 
+
+getVoteHash
+=====================
+
+    Property of the Web3 class.
+
+.. code-block:: javascript
+
+    web3.getVoteHash
+
+Contains the version of the ``web3`` wrapper class.
+
+
+----------
+Parameters
+----------
+
+1. ``from`` - address, 20 Bytes - the address who triggers the action
+2. ``pubkey`` - hex string, 128 Bytes - the BLS Public Key who triggers the action,How To Get Your Pubkey
+3. ``amount`` - hex string - the amount of vote
+4. ``salt`` - salt string
+
+
+-------
+Returns
+-------
+
+``String``: The Keccak-256 SHA3 of the given data.
+
+-------
+Example
+-------
+
+.. code-block:: javascript
+
+    web3.getVoteHash;
+    > "16d75d8c6bfb24de05c994db6756ba3cbafd0150cbc19737f49d3f3a073b43c2910ee9be73258427688ab864e2ab28a987b696b1975060d7e1557c64e3a2b0a89a"
+
+------------------------------------------------------------------------------
+
+
 version
 =====================
 
