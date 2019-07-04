@@ -13,7 +13,7 @@ The ``Core Module`` does provide the ``AbstractWeb3Module`` to implement Web3 co
 AbstractWeb3Module
 ==================
 
-Source: `AbstractWeb3Module <https://github.com/ethereum/web3.js/tree/1.0/packages/web3-core/src/AbstractWeb3Module.js>`_
+Source: `AbstractWeb3Module <https://github.com/pchain-org/pweb3/tree/pweb3-1.x/packages/web3-core/src/AbstractWeb3Module.js>`_
 
 The ``AbstractWeb3Module`` does have the following constructor parameters:
 

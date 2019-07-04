@@ -15,7 +15,7 @@ AbstractSubscription
 ====================
 
 
-Source: `AbstractSubscription <https://github.com/ethereum/web3.js/tree/1.0/packages/web3-core-subscriptions/lib/subscriptions/AbstractSubscription.js>`_
+Source: `AbstractSubscription <https://github.com/pchain-org/pweb3/tree/pweb3-1.x/packages/web3-core-subscriptions/lib/subscriptions/AbstractSubscription.js>`_
 
 The ``AbstractSubscription`` class extends from the ``EventEmitter`` object and does have the following constructor parameters:
 

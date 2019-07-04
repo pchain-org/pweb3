@@ -14,7 +14,7 @@ The ``Core Method Module`` does provide all method classes and the abstract meth
 AbstractMethodFactory
 =====================
 
-Source: `AbstractMethodFactory <https://github.com/ethereum/web3.js/tree/1.0/packages/web3-core-method/lib/factories/AbstractMethodFactory.js>`_
+Source: `AbstractMethodFactory <https://github.com/pchain-org/pweb3/tree/pweb3-1.x/packages/web3-core-method/lib/factories/AbstractMethodFactory.js>`_
 
 The ``AbstractMethodFactory`` does have the following constructor parameters:
 
@@ -63,11 +63,11 @@ Example
 AbstractMethod
 ==============
 
-Source: `AbstractMethod <https://github.com/ethereum/web3.js/tree/1.0/packages/web3-core-method/lib/methods/AbstractMethod.js>`_
+Source: `AbstractMethod <https://github.com/pchain-org/pweb3/tree/pweb3-1.x/packages/web3-core-method/lib/methods/AbstractMethod.js>`_
 
 Because we are always adding new JSON-RPC methods do we just link the methods folder as resource.
 
-Source: `Methods <https://github.com/ethereum/web3.js/tree/1.0/packages/web3-core-method/src/methods/>`_
+Source: `Methods <https://github.com/pchain-org/pweb3/tree/pweb3-1.x/packages/web3-core-method/src/methods/>`_
 
 The provided method classes do have the following interface:
 
@@ -148,7 +148,7 @@ The ``AbstractMethod`` class interface:
 AbstractObservedTransactionMethod
 =================================
 
-Source: `AbstractObservedTransactionMethod <https://github.com/ethereum/web3.js/tree/1.0/packages/web3-core-method/lib/methods/transaction/AbstractObservedTransactionMethod.js>`_
+Source: `AbstractObservedTransactionMethod <https://github.com/pchain-org/pweb3/tree/pweb3-1.x/packages/web3-core-method/lib/methods/transaction/AbstractObservedTransactionMethod.js>`_
 
 The ``AbstractObservedTransactionMethod`` extends from the :ref:`AbstractMethod <web3-module-abstract-method` and
 does have the following constructor parameters:

@@ -477,7 +477,7 @@ Example
         }
     }
 
-    // web3.js
+    // pweb3.js
     const MyContract = new web3.pi.Contract(abi, address);
     MyContract.methods.myFunction().call()
     .then(console.log);
@@ -498,7 +498,7 @@ Example
         }
     }
 
-    // web3.js
+    // pweb3.js
     const MyContract = new web3.pi.Contract(abi, address);
     MyContract.methods.myFunction().call()
     .then(console.log);

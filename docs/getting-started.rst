@@ -30,7 +30,7 @@ For  pweb3.js, check ``Web3.givenProvider``. If this property is ``null`` you sh
 
     // in node.js use: const Web3 = require('pweb3');
 
-    // use the given Provider, e.g in the browser with Metamask, or instantiate a new websocket provider
+    // use the given Provider, e.g in the browser with PMetamask, or instantiate a new websocket provider
     const web3 = new Web3(Web3.givenProvider || 'ws://localhost:6970/pchain', null, {});
 
     // or

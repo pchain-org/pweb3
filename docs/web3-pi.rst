@@ -1496,9 +1496,9 @@ requestAccounts
 
     web3.pi.requestAccounts([callback])
 
-This method will request/enable the accounts from the current environment it is running (Metamask, Status or Mist).
+This method will request/enable the accounts from the current environment it is running (PMetamask, Status or Mist).
 It doesn't work if you're connected to a node with a default PWeb3.js provider. (WebsocketProvider, HttpProvidder and IpcProvider)
-This method will only work if you're using the injected provider from a application like Status, Mist or Metamask.
+This method will only work if you're using the injected provider from a application like Status, Mist or PMetamask.
 
 For further information about the behavior of this method please read the EIP of it: `EIP-1102 <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1102.md>`_
 

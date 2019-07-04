@@ -1,1 +1,1 @@
-.. note:: This documentation is under construction and the web3.js 1.0 stable version isn't released. If you're using a version v0.x.x of pweb3.js then please have a look at `github.com/pweb3/wiki/wiki/JavaScript-API <https://github.com/pchain-org/pweb3/wiki/JavaScript-API-1.0>`_.
+.. note:: This documentation is under construction and the pweb3.js 1.0 stable version isn't released. If you're using a version v0.x.x of pweb3.js then please have a look at `github.com/pweb3/wiki/wiki/JavaScript-API <https://github.com/pchain-org/pweb3/wiki/JavaScript-API-1.0>`_.
