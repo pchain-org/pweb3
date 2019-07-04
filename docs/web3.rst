@@ -84,9 +84,6 @@ getVoteHash
 
     web3.getVoteHash
 
-Contains the version of the ``web3`` wrapper class.
-
-
 ----------
 Parameters
 ----------
