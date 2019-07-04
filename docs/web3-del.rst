@@ -17,10 +17,9 @@ delegate
 
 .. code-block:: javascript
 
-    del.delegate([callback])
+    web3.del.delegate(from,candidate,amount,gasPrice [, callback])
 
 Create a new transaction to Delegate your balance to Candidate.
-The RPC method used is ``del_delegate``.
 
 ----------
 Parameters
@@ -45,15 +44,14 @@ Example
 
 .. code-block:: javascript
 
-  // Request
-  curl -X POST -H "Content-Type:application/json" --data '{"jsonrpc":"2.0","method":"del_delegate","params":["0x1529FA43D9F7FE958662F7200739CDC3EC2666C7","0xd833b6738285f4a50cf42cf1a40c4000256589d4", "0x3635c9adc5dea00000"],"id":1}'
-
-  // Result
-  {
-    "id":1,
-    "jsonrpc": "2.0",
-    "result": "0xadef13..."
-  }
+    var from = "0xB3544059698177F14968D29A25AFD0D6D65F4534";
+    var candidate = "0xB3544059698177F14968D29A25AFD0D6D65F4537";
+    var amount = "0x21e19e0c9bab2400000";
+    var gasPrice = null:
+    web3.del.delegate(from,candidate,amount,gasPrice,function(err, result) {
+     if (!err)
+       console.log(result); 
+    });
 
 ------------------------------------------------------------------------------
 
@@ -63,10 +61,9 @@ cancelDelegate
 
 .. code-block:: javascript
 
-    del.cancelDelegate([, callback])
+    web3.del.cancelDelegate(from,candidate,amount,gasPrice [, callback])
 
 Create a new transaction to Cancel your Delegation from Candidate.
-The RPC method used is ``del_cancelDelegate``.
 
 ----------
 Parameters
@@ -91,15 +88,14 @@ Example
 
 .. code-block:: javascript
 
-    // Request
-    curl -X POST -H "Content-Type:application/json" --data '{"jsonrpc":"2.0","method":"del_cancelDelegate","params":["0x1529FA43D9F7FE958662F7200739CDC3EC2666C7","0xd833b6738285f4a50cf42cf1a40c4000256589d4", "0x10000"],"id":1}'
-
-    // Result
-    {
-      "id":1,
-      "jsonrpc": "2.0",
-      "result": "0xadef13..."
-    }
+  var from = "0xB3544059698177F14968D29A25AFD0D6D65F4534";
+  var candidate = "0xB3544059698177F14968D29A25AFD0D6D65F4537";
+  var amount = "0x152D02C7E14AF6800000";
+  var gasPrice = null:
+  web3.del.cancelDelegate(from,candidate,amount,gasPrice,function(err, result) {
+   if (!err)
+     console.log(result); 
+  });
 
 
 ------------------------------------------------------------------------------
@@ -110,10 +106,9 @@ applyCandidate
 
 .. code-block:: javascript
 
-    del.applyCandidate([, callback])
+     web3.del.applyCandidate(from,securityDeposit,commission,gasPrice [, callback])
 
 Create a new transaction to become a Candidate (with specific security deposit and commission fee rate).
-The RPC method used is ``del_applyCandidate``.
 
 ----------
 Parameters
@@ -140,15 +135,14 @@ Example
 
 .. code-block:: javascript
 
-    // Request
-    curl -X POST -H "Content-Type:application/json" --data '{"jsonrpc":"2.0","method":"del_applyCandidate","params":["0xd833b6738285f4a50cf42cf1a40c4000256589d4", "0x10000", 10],"id":1}'
-
-    // Result
-    {
-      "id":1,
-      "jsonrpc": "2.0",
-      "result": "0xadef13..."
-    }
+    var from = "0xB3544059698177F14968D29A25AFD0D6D65F4534";
+    var securityDeposit = "0x21e19e0c9bab2400000";
+    var commission = 10;
+    var gasPrice = null:
+    web3.del.applyCandidate(from,securityDeposit,commission,gasPrice,function(err, result) {
+     if (!err)
+       console.log(result); 
+    });
 
 ------------------------------------------------------------------------------
 
@@ -157,10 +151,9 @@ cancelCandidate
 
 .. code-block:: javascript
 
-    del.cancelCandidate([, callback])
+     web3.del.cancelCandidate(from,gasPrice [, callback])
 
-Create a new transaction to cancel the Candidate qualification, if the address has deposited proxied balance, it will be refund at the end of epoch, otherwise will be refund immediately.
-The RPC method used is ``del_cancelCandidate``.
+Create a new transaction to become a Candidate (with specific security deposit and commission fee rate).
 
 ----------
 Parameters
@@ -183,15 +176,12 @@ Example
 
 .. code-block:: javascript
 
-    // Request
-    curl -X POST -H "Content-Type:application/json" --data '{"jsonrpc":"2.0","method":"del_cancelCandidate","params":["0xd833b6738285f4a50cf42cf1a40c4000256589d4"],"id":1}'
-
-    // Result
-    {
-      "id":1,
-      "jsonrpc": "2.0",
-      "result": "0xadef13..."
-    }
+    var from = "0xB3544059698177F14968D29A25AFD0D6D65F4534";
+    var gasPrice = null:
+    web3.del.cancelCandidate(from,gasPrice,function(err, result) {
+     if (!err)
+       console.log(result); 
+    });
 
 ------------------------------------------------------------------------------
 
@@ -200,10 +190,9 @@ checkCandidate
 
 .. code-block:: javascript
 
-    del.checkCandidate([, callback])
+    web3.del.checkCandidate(from,blockNumber [, callback])
 
 Returns the candidate status of the account of given address.
-The RPC method used is ``del_gcheckCandidate``.
 
 ----------
 Parameters
@@ -232,18 +221,11 @@ Example
 
 .. code-block:: javascript
 
-    // Request
-    curl -X POST -H "Content-Type:application/json" --data '{"jsonrpc":"2.0","method":"del_checkCandidate","params":["0xd833b6738285f4a50cf42cf1a40c4000256589d4", "latest"],"id":1}'
-
-    // Result
-    {
-        "jsonrpc": "2.0",
-        "id": 1,
-        "result": {
-            "candidate": false,
-            "commission": 0
-        }
-    }
+    var from = "0xd833b6738285f4a50cf42cf1a40c4000256589d4";
+    web3.del.checkCandidate(from,"latest",function(err, result) {
+     if (!err)
+       console.log(result); 
+    });
 
 ------------------------------------------------------------------------------
 
