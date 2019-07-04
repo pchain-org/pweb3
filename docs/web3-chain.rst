@@ -76,7 +76,7 @@ Parameters
 2. ``pubkey`` - hex string, 128 Bytes - the BLS Public Key who triggers the action
 3. ``chainId`` - string - child chain id
 4. ``depositAmount`` - hex string - Amount of the Deposit PAI to join the Child Chain
-5. ``signature`` - hex string, 64 Bytes - the signature of From Address, signed by BLS Private Key. (How to sign, see web3.chain.signAddress)
+5. ``signature`` - hex string, 64 Bytes - the signature of From Address, signed by BLS Private Key. (How to sign, see :ref:`web3.chain.signAddress <chain_signAddress>`)
 6. ``gasPrice`` - hex string - ( if set to null,system will give default value(1 gwei) ) gas price from the request
 
 -------
@@ -250,7 +250,7 @@ Parameters
 1. ``from`` - address, 20 Bytes - the address who triggers the action
 2. ``amount`` -  hex string - amount of PAI to withdraw
 3. ``chainId`` -  string - child chain id
-3. ``txHash`` -  string - Tx Hash of the chain_withdrawFromChildChain rpc
+4. ``txHash`` -  string - Tx Hash of the chain_withdrawFromChildChain rpc
 
 -------
 Returns
