@@ -1,9 +1,9 @@
 {
     "name": "web3-eth-contract",
-    "namespace": "ethereum",
+    "namespace": "pchain",
     "version": "1.0.0-beta.55",
-    "description": "Web3 module to interact with Ethereum smart contracts.",
-    "repository": "https://github.com/ethereum/web3.js/tree/1.0/packages/web3-eth-contract",
+    "description": "Web3 module to interact with Pchain smart contracts.",
+    "repository": "https://github.com/pchain-org/pweb3/tree/pweb3-1.x/packages/web3-eth-contract",
     "license": "LGPL-3.0",
     "main": "dist/web3-eth-contract.cjs.js",
     "module": "dist/web3-eth-contract.esm.js",

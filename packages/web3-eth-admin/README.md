@@ -17,7 +17,7 @@ npm install web3-eth-admin
 import {Admin} from 'web3-eth-admin';
 
 const admin = new Admin(
-    'http://127.0.0.1:8546',
+    'http://127.0.0.1:6970/pchain',
     null,
     options
 );
@@ -27,5 +27,5 @@ const admin = new Admin(
 
 All the typescript typings are placed in the types folder.
 
-[docs]: http://web3js.readthedocs.io/en/1.0/
-[repo]: https://github.com/ethereum/web3.js
+[docs]: https://pweb3js.readthedocs.io/en/latest/
+[repo]: https://github.com/pchain-org/pweb3

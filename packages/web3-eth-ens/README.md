@@ -17,7 +17,7 @@ npm install web3-eth-ens
 import {Ens} from 'web3-eth-ens';
 
 new Ens(
-    'ws://localhost:8546',
+    'ws://localhost:6970/pchain',
     null,
     options,
     accountsModule
@@ -28,5 +28,5 @@ new Ens(
 
 All the typescript typings are placed in the types folder. 
 
-[docs]: http://web3js.readthedocs.io/en/1.0/
-[repo]: https://github.com/ethereum/web3.js
+[docs]: https://pweb3js.readthedocs.io/en/latest/
+[repo]: https://github.com/pchain-org/pweb3
