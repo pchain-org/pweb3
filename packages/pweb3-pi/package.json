@@ -1,7 +1,7 @@
 {
     "name": "pweb3-pi",
     "namespace": "pchain",
-    "version": "1.0.0-beta.58",
+    "version": "1.2.3",
     "description": "Web3 module to interact with the Pchain blockchain and smart contracts.",
     "repository": "https://github.com/pchain-org/pweb3/tree/pweb3-1.x/packages/pweb3-pi",
     "license": "LGPL-3.0",
