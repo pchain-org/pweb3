@@ -24,11 +24,11 @@
 // TODO: Move the folders back to simpler structure e.g.: "packages/core/<methods|subscriptions|providers>"
 import {AbstractWeb3Module} from 'pweb3-core';
 import {ProviderDetector, ProvidersModuleFactory} from 'pweb3-providers';
-import * as Utils from 'pweb3-utils';
+import * as Utils from 'web3-utils';
 import {Eth} from 'web3-eth';
 import {Pi} from 'pweb3-pi';
-import {Shh} from 'pweb3-shh';
-import {Network} from 'pweb3-net';
+import {Shh} from 'web3-shh';
+import {Network} from 'web3-net';
 import {Personal} from 'web3-eth-personal';
 import {Tdm} from 'pweb3-tdm';
 import {Chain} from 'pweb3-chain';
