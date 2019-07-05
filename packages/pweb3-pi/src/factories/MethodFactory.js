@@ -49,7 +49,7 @@ import {
     EthSendTransactionMethod,
     GetProofMethod,
     GetFullBalanceMethod
-} from 'web3-core-method';
+} from 'pweb3-core-method';
 
 import GetBlockMethod from '../methods/GetBlockMethod';
 import GetUncleMethod from '../methods/GetUncleMethod';

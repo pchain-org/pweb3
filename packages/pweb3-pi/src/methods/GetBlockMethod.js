@@ -20,7 +20,7 @@
  * @date 2018
  */
 
-import {AbstractGetBlockMethod} from 'web3-core-method';
+import {AbstractGetBlockMethod} from 'pweb3-core-method';
 
 export default class GetBlockMethod extends AbstractGetBlockMethod {
     /**

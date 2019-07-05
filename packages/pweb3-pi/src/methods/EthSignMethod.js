@@ -20,7 +20,7 @@
  * @date 2018
  */
 
-import {SignMethod} from 'web3-core-method';
+import {SignMethod} from 'pweb3-core-method';
 
 export default class EthSignMethod extends SignMethod {
     /**

@@ -20,7 +20,7 @@
  * @date 2018
  */
 
-import {AbstractWeb3Module} from 'web3-core';
+import {AbstractWeb3Module} from 'pweb3-core';
 
 export default class Pi extends AbstractWeb3Module {
     /**

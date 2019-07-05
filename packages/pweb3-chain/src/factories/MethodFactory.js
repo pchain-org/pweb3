@@ -31,7 +31,7 @@ import {AbstractMethodFactory,
     SetBlockRewardMethod,
     GetBlockRewardMethod,
     GetAllChainsMethod
-} from 'web3-core-method';
+} from 'pweb3-core-method';
 
 export default class MethodFactory extends AbstractMethodFactory {
     /**

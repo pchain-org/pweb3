@@ -17,7 +17,7 @@
  * @date 2018
  */
 
-import {AbstractWeb3Module, Web3ModuleOptions} from 'web3-core';
+import {AbstractWeb3Module, Web3ModuleOptions} from 'pweb3-core';
 import {Utils} from 'web3-utils';
 import * as net from 'net';
 import {provider} from 'web3-providers';
@@ -26,8 +26,6 @@ import {Network} from 'web3-net';
 import {Shh} from 'web3-shh';
 import {Tdm} from 'pweb3-tdm';
 import {Chain} from 'pweb3-chain';
-
-
 import {Del} from 'pweb3-del';
 import {Pi} from 'pweb3-pi';
 import {Personal} from 'web3-eth-personal';

@@ -20,7 +20,7 @@
  * @date 2019
  */
 
-import {AbstractWeb3Module} from 'web3-core';
+import {AbstractWeb3Module} from 'pweb3-core';
 
 export default class Tdm extends AbstractWeb3Module {
     /**

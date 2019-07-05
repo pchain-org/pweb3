@@ -24,7 +24,7 @@ import {
     SyncingSubscription
 } from 'web3-core-subscriptions';
 
-import {GetPastLogsMethod} from 'web3-core-method';
+import {GetPastLogsMethod} from 'pweb3-core-method';
 
 export default class SubscriptionsFactory {
     /**

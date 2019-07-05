@@ -29,7 +29,7 @@ import {
     GetNextEpochVoteMethod,
     GetNextEpochValidatorsMethod,
     GeneratePrivateValidatorMethod
-} from 'web3-core-method';
+} from 'pweb3-core-method';
 
 export default class MethodFactory extends AbstractMethodFactory {
     /**

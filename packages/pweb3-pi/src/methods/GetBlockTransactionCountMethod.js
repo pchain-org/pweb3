@@ -20,7 +20,7 @@
  * @date 2018
  */
 
-import {AbstractGetBlockTransactionCountMethod} from 'web3-core-method';
+import {AbstractGetBlockTransactionCountMethod} from 'pweb3-core-method';
 
 export default class GetBlockTransactionCountMethod extends AbstractGetBlockTransactionCountMethod {
     /**

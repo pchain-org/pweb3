@@ -29,7 +29,7 @@ import {
     TransactionConfig,
     TransactionReceipt,
     Web3ModuleOptions,
-} from 'web3-core';
+} from 'pweb3-core';
 import {Contract, ContractOptions} from 'web3-eth-contract';
 import {Iban} from 'web3-eth-iban';
 import {Accounts} from 'web3-eth-accounts';

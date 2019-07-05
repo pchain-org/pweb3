@@ -20,7 +20,7 @@
  * @date 2018
  */
 
-import {GetAccountsMethod} from 'web3-core-method';
+import {GetAccountsMethod} from 'pweb3-core-method';
 
 export default class EthGetAccountsMethod extends GetAccountsMethod {
     /**

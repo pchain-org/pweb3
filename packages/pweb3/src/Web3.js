@@ -22,7 +22,7 @@
 // TODO: Export here a web3 namespace with context handling possibilities and not a object and remove the factory
 // TODO: objects and do them the functional way because of the tree shaking.
 // TODO: Move the folders back to simpler structure e.g.: "packages/core/<methods|subscriptions|providers>"
-import {AbstractWeb3Module} from 'web3-core';
+import {AbstractWeb3Module} from 'pweb3-core';
 import {ProviderDetector, ProvidersModuleFactory} from 'web3-providers';
 import * as Utils from 'web3-utils';
 import {Eth} from 'web3-eth';
