@@ -19,7 +19,7 @@
  * @date 2018
  */
 
-import {provider} from 'web3-providers';
+import {provider} from 'pweb3-providers';
 import {
     AbstractWeb3Module,
     Log,

@@ -1,7 +1,7 @@
 {
     "name": "pweb3-del",
     "namespace": "pchain",
-    "version": "1.2.7",
+    "version": "1.2.8",
     "description": "Web3 module to interact with the Pchain del properties.",
     "repository": "https://github.com/pchain-org/pweb3/tree/pweb3-1.x/packages/pweb3-del",
     "license": "LGPL-3.0",
@@ -17,12 +17,12 @@
     },
     "dependencies": {
         "@babel/runtime": "^7.3.1",
-        "pweb3-core": "1.2.7",
+        "pweb3-core": "1.2.8",
         "web3-core-helpers": "1.0.0-beta.55",
-        "pweb3-core-method": "1.2.7",
+        "pweb3-core-method": "1.2.8",
         "web3-core-subscriptions": "1.0.0-beta.55",
         "web3-net": "1.0.0-beta.55",
-        "web3-providers": "1.0.0-beta.55",
+        "pweb3-providers": "1.2.8",
         "web3-utils": "1.0.0-beta.55"
     },
     "devDependencies": {

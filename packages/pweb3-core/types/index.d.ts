@@ -31,7 +31,7 @@ import {
     WebsocketProvider,
     CustomProvider,
     WebsocketProviderOptions
-} from 'web3-providers';
+} from 'pweb3-providers';
 
 export class AbstractWeb3Module {
     constructor(

@@ -18,7 +18,7 @@
  */
 
 import {AbstractWeb3Module, Web3ModuleOptions} from 'pweb3-core';
-import {provider} from 'web3-providers';
+import {provider} from 'pweb3-providers';
 import * as net from 'net';
 
 export class Chain extends AbstractWeb3Module {

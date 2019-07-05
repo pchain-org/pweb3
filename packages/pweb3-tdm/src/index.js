@@ -24,7 +24,7 @@ import * as Utils from 'web3-utils';
 import {formatters} from 'web3-core-helpers';
 import MethodFactory from './factories/MethodFactory';
 import TdmModule from './Tdm.js';
-import {ProviderResolver} from 'web3-providers';
+import {ProviderResolver} from 'pweb3-providers';
 import SubscriptionsFactory from "../src/factories/SubscriptionsFactory";
 
 /**

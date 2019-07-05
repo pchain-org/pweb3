@@ -32,7 +32,7 @@ import * as Utils from 'web3-utils';
 import EthTransactionSigner from './signers/TransactionSigner';
 import MethodFactory from './factories/MethodFactory';
 import SubscriptionsFactory from './factories/SubscriptionsFactory';
-import {ProviderResolver} from 'web3-providers';
+import {ProviderResolver} from 'pweb3-providers';
 import PiModule from './Pi.js';
 
 /**

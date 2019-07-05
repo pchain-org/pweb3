@@ -17,8 +17,8 @@
  * @date 2019
  */
 
-import {AbstractWeb3Module, Web3ModuleOptions} from 'web3-core';
-import {provider} from 'web3-providers';
+import {AbstractWeb3Module, Web3ModuleOptions} from 'pweb3-core';
+import {provider} from 'pweb3-providers';
 import * as net from 'net';
 
 export class Del extends AbstractWeb3Module {

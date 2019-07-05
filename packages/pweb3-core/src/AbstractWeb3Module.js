@@ -28,7 +28,7 @@ import {
     BatchRequest,
     ProviderDetector,
     ProviderResolver
-} from 'web3-providers';
+} from 'pweb3-providers';
 import {MethodProxy} from 'pweb3-core-method';
 import {toChecksumAddress} from 'web3-utils';
 
