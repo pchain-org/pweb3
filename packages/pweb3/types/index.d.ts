@@ -22,7 +22,7 @@ import {Utils} from 'web3-utils';
 import * as net from 'net';
 import {provider} from 'pweb3-providers';
 import {Eth} from 'web3-eth';
-import {Network} from 'web3-net';
+import {Network} from 'pweb3-net';
 import {Shh} from 'web3-shh';
 import {Tdm} from 'pweb3-tdm';
 import {Chain} from 'pweb3-chain';

@@ -1,7 +1,7 @@
 {
     "name": "pweb3-providers",
     "namespace": "pchain",
-    "version": "1.2.8",
+    "version": "1.2.11",
     "description": "Web3 module to handle requests to external providers.",
     "repository": "https://github.com/pchain-org/pweb3/tree/pweb3-1.x/packages/pweb3-providers",
     "license": "LGPL-3.0",
@@ -21,9 +21,9 @@
         "eventemitter3": "3.1.0",
         "lodash": "^4.17.11",
         "url-parse": "1.4.4",
-        "pweb3-core": "1.2.8",
-        "web3-core-helpers": "1.0.0-beta.55",
-        "pweb3-core-method": "1.2.8",
+        "pweb3-core": "1.2.11",
+        "pweb3-core-helpers": "1.2.11",
+        "pweb3-core-method": "1.2.11",
         "web3-utils": "1.0.0-beta.55",
         "websocket": "^1.0.28",
         "xhr2-cookies": "1.1.0"

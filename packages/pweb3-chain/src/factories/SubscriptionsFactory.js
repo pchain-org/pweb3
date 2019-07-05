@@ -17,7 +17,7 @@
  * @date 2019
  */
 
-import {MessagesSubscription} from 'web3-core-subscriptions';
+import {MessagesSubscription} from 'pweb3-core-subscriptions';
 
 export default class SubscriptionsFactory {
     /**

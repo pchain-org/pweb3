@@ -12,5 +12,5 @@ export default rollupConfig('Web3', pkg.name, {
     'pweb3-chain': 'pweb3-chain',
     'pweb3-del': 'pweb3-del',
     'pweb3-pi': 'pweb3-pi',
-    'web3-net': 'web3-net'
+    'pweb3-net': 'pweb3-net'
 });

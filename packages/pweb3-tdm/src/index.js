@@ -19,9 +19,9 @@
  * @author Samuel Furter <samuel@ethereum.org>
  * @date 2018
  */
-import {Network} from 'web3-net';
+import {Network} from 'pweb3-net';
 import * as Utils from 'web3-utils';
-import {formatters} from 'web3-core-helpers';
+import {formatters} from 'pweb3-core-helpers';
 import MethodFactory from './factories/MethodFactory';
 import TdmModule from './Tdm.js';
 import {ProviderResolver} from 'pweb3-providers';

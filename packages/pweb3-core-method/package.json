@@ -1,7 +1,7 @@
 {
     "name": "pweb3-core-method",
     "namespace": "pchain",
-    "version": "1.2.8",
+    "version": "1.2.11",
     "description": "Handles the JSON-RPC methods. This package is also internally used by web3.",
     "repository": "https://github.com/pchain-org/pweb3/tree/pweb3-1.x/packages/pweb3-core-method",
     "license": "LGPL-3.0",
@@ -21,9 +21,9 @@
         "eventemitter3": "3.1.0",
         "lodash": "^4.17.11",
         "rxjs": "^6.4.0",
-        "pweb3-core": "1.2.8",
-        "web3-core-helpers": "1.0.0-beta.55",
-        "web3-core-subscriptions": "1.0.0-beta.55",
+        "pweb3-core": "1.2.11",
+        "pweb3-core-helpers": "1.2.11",
+        "pweb3-core-subscriptions": "1.2.11",
         "web3-utils": "1.0.0-beta.55"
     },
     "devDependencies": {

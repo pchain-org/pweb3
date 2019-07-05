@@ -19,7 +19,7 @@
 
 import {Utils} from 'web3-utils';
 import {AbstractWeb3Module, PromiEvent} from 'pweb3-core';
-import {formatters} from 'web3-core-helpers';
+import {formatters} from 'pweb3-core-helpers';
 
 export class AbstractMethod {
     constructor(

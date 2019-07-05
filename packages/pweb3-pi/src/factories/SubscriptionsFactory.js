@@ -22,7 +22,7 @@ import {
     NewHeadsSubscription,
     NewPendingTransactionsSubscription,
     SyncingSubscription
-} from 'web3-core-subscriptions';
+} from 'pweb3-core-subscriptions';
 
 import {GetPastLogsMethod} from 'pweb3-core-method';
 
