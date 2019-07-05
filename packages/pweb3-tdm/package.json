@@ -1,7 +1,7 @@
 {
     "name": "pweb3-tdm",
     "namespace": "pchain",
-    "version": "1.0.0-beta.55",
+    "version": "1.0.0-beta.58",
     "description": "Web3 module to interact with the Pchain tdm properties.",
     "repository": "https://github.com/pchain-org/pweb3/tree/pweb3-1.x/packages/pweb3-tdm",
     "license": "LGPL-3.0",

@@ -1,7 +1,7 @@
 {
     "name": "pweb3-chain",
     "namespace": "pchain",
-    "version": "1.0.0-beta.55",
+    "version": "1.0.0-beta.58",
     "description": "Web3 module to interact with the Pchain chain properties.",
     "repository": "https://github.com/pchain-org/pweb3/tree/pweb3-1.x/packages/pweb3-chain",
     "license": "LGPL-3.0",
