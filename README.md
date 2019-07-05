@@ -8,6 +8,19 @@ You need to run a local Pchain node to use this library.
 
 [Documentation](https://pweb3js.readthedocs.io/en/latest/)
 
+## Installation
+
+### Node.js
+
+```bash
+npm install pweb3
+```
+
+### Yarn
+
+```bash
+yarn add pweb3
+```
 
 
 ## Usage
