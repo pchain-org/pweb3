@@ -21,14 +21,14 @@
  */
 
 import {formatters} from 'pweb3-core-helpers';
-import {Accounts} from 'web3-eth-accounts';
-import {Ens} from 'web3-eth-ens';
-import {ContractModuleFactory} from 'web3-eth-contract';
-import {Personal} from 'web3-eth-personal';
-import {AbiCoder} from 'web3-eth-abi';
-import {Iban} from 'web3-eth-iban';
+import {Accounts} from 'pweb3-eth-accounts';
+import {Ens} from 'pweb3-eth-ens';
+import {ContractModuleFactory} from 'pweb3-eth-contract';
+import {Personal} from 'pweb3-eth-personal';
+import {AbiCoder} from 'pweb3-eth-abi';
+import {Iban} from 'pweb3-eth-iban';
 import {Network} from 'pweb3-net';
-import * as Utils from 'web3-utils';
+import * as Utils from 'pweb3-utils';
 import EthTransactionSigner from './signers/TransactionSigner';
 import MethodFactory from './factories/MethodFactory';
 import SubscriptionsFactory from './factories/SubscriptionsFactory';

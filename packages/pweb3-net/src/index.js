@@ -21,7 +21,7 @@
  */
 
 import {formatters} from 'pweb3-core-helpers';
-import * as Utils from 'web3-utils';
+import * as Utils from 'pweb3-utils';
 import MethodFactory from './factories/MethodFactory';
 import NetworkModule from './Network.js';
 

@@ -1,0 +1,40 @@
+{
+    "name": "pweb3-eth-ens",
+    "version": "1.0.0-beta.60",
+    "description": "ENS support for web3.",
+    "repository": "https://github.com/pchain-org/pweb3/tree/pweb3-1.x/packages/pweb3-eth-ens",
+    "license": "LGPL-3.0",
+    "main": "dist/pweb3-eth-ens.cjs.js",
+    "module": "dist/pweb3-eth-ens.esm.js",
+    "browser": "dist/pweb3-eth-ens.umd.js",
+    "types": "types/index.d.ts",
+    "scripts": {
+        "build": "rollup -c",
+        "dev": "rollup -c -w",
+        "test": "jest",
+        "dtslint": "dtslint types --onlyTestTsNext"
+    },
+    "dependencies": {
+        "@babel/runtime": "^7.3.1",
+        "eth-ens-namehash": "2.0.8",
+        "lodash": "^4.17.11",
+        "pweb3-core": "1.0.0-beta.60",
+        "pweb3-core-helpers": "1.0.0-beta.60",
+        "pweb3-core-method": "1.0.0-beta.60",
+        "pweb3-eth-abi": "1.0.0-beta.60",
+        "pweb3-eth-accounts": "1.0.0-beta.60",
+        "pweb3-eth-contract": "1.0.0-beta.60",
+        "pweb3-net": "1.0.0-beta.60",
+        "pweb3-providers": "1.0.0-beta.60",
+        "pweb3-utils": "1.0.0-beta.60"
+    },
+    "devDependencies": {
+        "definitelytyped-header-parser": "^1.0.1",
+        "dtslint": "0.4.2"
+    },
+    "files": [
+        "dist",
+        "types/index.d.ts"
+    ],
+    "gitHead": "37347fd46344f45d1c57104920bdda0779f0d51c"
+}

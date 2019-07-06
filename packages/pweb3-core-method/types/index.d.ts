@@ -17,7 +17,7 @@
  * @date 2018
  */
 
-import {Utils} from 'web3-utils';
+import {Utils} from 'pweb3-utils';
 import {AbstractWeb3Module, PromiEvent} from 'pweb3-core';
 import {formatters} from 'pweb3-core-helpers';
 

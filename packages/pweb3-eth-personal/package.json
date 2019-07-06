@@ -1,0 +1,37 @@
+{
+    "name": "pweb3-eth-personal",
+    "namespace": "pchain",
+    "version": "1.0.0-beta.60",
+    "description": "Web3 module to interact with the Pchain blockchain accounts stored in the node.",
+    "repository": "https://github.com/pchain-org/pweb3/tree/pweb3-1.x/packages/pweb3-eth-personal",
+    "license": "LGPL-3.0",
+    "main": "dist/pweb3-eth-personal.cjs.js",
+    "module": "dist/pweb3-eth-personal.esm.js",
+    "browser": "dist/pweb3-eth-personal.umd.js",
+    "scripts": {
+        "build": "rollup -c",
+        "dev": "rollup -c -w",
+        "test": "jest",
+        "dtslint": "dtslint types --onlyTestTsNext"
+    },
+    "types": "types/index.d.ts",
+    "dependencies": {
+        "@babel/runtime": "^7.3.1",
+        "pweb3-core": "1.0.0-beta.60",
+        "pweb3-core-helpers": "1.0.0-beta.60",
+        "pweb3-core-method": "1.0.0-beta.60",
+        "pweb3-eth-accounts": "1.0.0-beta.60",
+        "pweb3-net": "1.0.0-beta.60",
+        "pweb3-providers": "1.0.0-beta.60",
+        "pweb3-utils": "1.0.0-beta.60"
+    },
+    "devDependencies": {
+        "definitelytyped-header-parser": "^1.0.1",
+        "dtslint": "0.4.2"
+    },
+    "files": [
+        "dist",
+        "types/index.d.ts"
+    ],
+    "gitHead": "37347fd46344f45d1c57104920bdda0779f0d51c"
+}

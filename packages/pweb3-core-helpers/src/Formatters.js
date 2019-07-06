@@ -25,8 +25,8 @@ import isString from 'lodash/isString';
 import isArray from 'lodash/isArray';
 import isObject from 'lodash/isObject';
 import isNumber from 'lodash/isNumber';
-import * as Utils from 'web3-utils';
-import {Iban} from 'web3-eth-iban';
+import * as Utils from 'pweb3-utils';
+import {Iban} from 'pweb3-eth-iban';
 
 /**
  * TODO: This method could be removed because it is just a wrapper for the toBN method of Utils

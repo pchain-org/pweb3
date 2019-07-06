@@ -20,7 +20,7 @@
  * @date 2018
  */
 import {Network} from 'pweb3-net';
-import * as Utils from 'web3-utils';
+import * as Utils from 'pweb3-utils';
 import {formatters} from 'pweb3-core-helpers';
 import MethodFactory from './factories/MethodFactory';
 import TdmModule from './Tdm.js';

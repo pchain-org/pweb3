@@ -20,7 +20,7 @@
  * @date 2018
  */
 
-import {JsonRpcResponseValidator, JsonRpcPayload} from 'web3-providers';
+import {JsonRpcResponseValidator, JsonRpcPayload} from 'pweb3-providers';
 
 const jsonRpcPayload: JsonRpcPayload = {
     jsonrpc: 'test',

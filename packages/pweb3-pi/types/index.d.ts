@@ -30,14 +30,14 @@ import {
     TransactionReceipt,
     Web3ModuleOptions,
 } from 'pweb3-core';
-import {Contract, ContractOptions} from 'web3-eth-contract';
-import {Iban} from 'web3-eth-iban';
-import {Accounts} from 'web3-eth-accounts';
-import {AbiCoder} from 'web3-eth-abi';
+import {Contract, ContractOptions} from 'pweb3-eth-contract';
+import {Iban} from 'pweb3-eth-iban';
+import {Accounts} from 'pweb3-eth-accounts';
+import {AbiCoder} from 'pweb3-eth-abi';
 import {Network} from 'pweb3-net';
-import {Personal} from 'web3-eth-personal';
-import {AbiItem} from 'web3-utils';
-import {Ens} from 'web3-eth-ens';
+import {Personal} from 'pweb3-eth-personal';
+import {AbiItem} from 'pweb3-utils';
+import {Ens} from 'pweb3-eth-ens';
 import * as net from 'net';
 
 export class Pi extends AbstractWeb3Module {

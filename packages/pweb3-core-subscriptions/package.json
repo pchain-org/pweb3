@@ -1,7 +1,7 @@
 {
     "name": "pweb3-core-subscriptions",
     "namespace": "pchain",
-    "version": "1.2.11",
+    "version": "1.0.0-beta.60",
     "description": "Manages web3 subscriptions. This is an internal package.",
     "repository": "https://github.com/pchain-org/pweb3/tree/pweb3-1.x/packages/pweb3-core-subscriptions",
     "license": "LGPL-3.0",
@@ -22,8 +22,8 @@
     "devDependencies": {
         "definitelytyped-header-parser": "^1.0.1",
         "dtslint": "0.4.2",
-        "pweb3-core-helpers": "1.2.11",
-        "web3-utils": "1.0.0-beta.55"
+        "pweb3-core-helpers": "1.0.0-beta.60",
+        "pweb3-utils": "1.0.0-beta.60"
     },
     "files": [
         "dist"

@@ -17,10 +17,10 @@
  * @date 2018
  */
 
-import {AbstractMethod} from 'web3-core-method';
-import * as Utils from 'web3-utils';
-import {formatters} from 'web3-core-helpers';
-import {AbstractWeb3Module} from 'web3-core';
+import {AbstractMethod} from 'pweb3-core-method';
+import * as Utils from 'pweb3-utils';
+import {formatters} from 'pweb3-core-helpers';
+import {AbstractWeb3Module} from 'pweb3-core';
 
 const abstractWeb3Module = new AbstractWeb3Module('http://localhost:8545');
 const abstractMethod = new AbstractMethod('rpc_method', 1, Utils, formatters, abstractWeb3Module);

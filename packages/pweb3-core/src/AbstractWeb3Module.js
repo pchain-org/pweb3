@@ -30,7 +30,7 @@ import {
     ProviderResolver
 } from 'pweb3-providers';
 import {MethodProxy} from 'pweb3-core-method';
-import {toChecksumAddress} from 'web3-utils';
+import {toChecksumAddress} from 'pweb3-utils';
 
 export default class AbstractWeb3Module {
     /**

@@ -18,17 +18,17 @@
  */
 
 import {AbstractWeb3Module, Web3ModuleOptions} from 'pweb3-core';
-import {Utils} from 'web3-utils';
+import {Utils} from 'pweb3-utils';
 import * as net from 'net';
 import {provider} from 'pweb3-providers';
-import {Eth} from 'web3-eth';
+import {Eth} from 'pweb3-eth';
 import {Network} from 'pweb3-net';
-import {Shh} from 'web3-shh';
+import {Shh} from 'pweb3-shh';
 import {Tdm} from 'pweb3-tdm';
 import {Chain} from 'pweb3-chain';
 import {Del} from 'pweb3-del';
 import {Pi} from 'pweb3-pi';
-import {Personal} from 'web3-eth-personal';
+import {Personal} from 'pweb3-eth-personal';
 
 export default class Web3 extends AbstractWeb3Module {
     constructor(
