@@ -1,7 +1,7 @@
 {
     "name": "pweb3",
     "namespace": "pchain",
-    "version": "1.0.0-beta.60",
+    "version": "1.0.0-beta.62",
     "description": "Pchain JavaScript API",
     "repository": "https://github.com/pchain-org/pweb3/tree/pweb3-1.x/packages/pweb3",
     "license": "LGPL-3.0",
@@ -43,7 +43,7 @@
         "pweb3-core": "1.0.0-beta.60",
         "pweb3-providers": "1.0.0-beta.60",
         "pweb3-tdm": "1.0.0-beta.60",
-        "pweb3-chain": "1.0.0-beta.60",
+        "pweb3-chain": "1.0.0-beta.61",
         "pweb3-del": "1.0.0-beta.60",
         "pweb3-pi": "1.0.0-beta.60",
         "pweb3-utils": "1.0.0-beta.60"
