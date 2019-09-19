@@ -17,7 +17,7 @@
  * @date 2019
  */
 
-import EthereumTx from 'ethereumjs-tx';
+import EthereumTx from 'pchainjs-tx';
 
 export default class TransactionSigner {
     /**
@@ -57,6 +57,10 @@ export default class TransactionSigner {
 
         if (privateKey.startsWith('0x')) {
             privateKey = privateKey.substring(2);
+        }
+
+        if (!transaction.chainId) {
+            throw new Error('No chainId given to the TransactionSigner.');
         }
 
         const ethTx = new EthereumTx(transaction);

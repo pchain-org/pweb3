@@ -17,7 +17,7 @@
     "types": "types/index.d.ts",
     "dependencies": {
         "@babel/runtime": "^7.3.1",
-        "ethereumjs-tx": "^1.3.7",
+        "pchainjs-tx": "^1.0.8",
         "rxjs": "^6.4.0",
         "pweb3-core": "1.0.0-beta.60",
         "pweb3-core-helpers": "1.0.0-beta.60",
